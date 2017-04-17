@@ -22,4 +22,11 @@ public class FragmentContact extends Fragment implements ContactView{
     ButterKnife.bind(this, view);
     return view;
   }
+
+  public static FragmentContact newInstance() {
+     Bundle args = new Bundle();
+     FragmentContact fragment = new FragmentContact();
+    fragment.setArguments(args);
+    return fragment;
+  }
 }

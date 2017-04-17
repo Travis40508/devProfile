@@ -5,4 +5,15 @@ package com.example.rodneytressler.devprofile.Views.MainScreen;
  */
 
 public interface MainView {
+  void loadPagerAdapter();
+
+  void listenForPageChanges();
+
+  void moveToAbout();
+
+  void moveToAndroid();
+
+  void moveToWeb();
+
+  void moveToContact();
 }
