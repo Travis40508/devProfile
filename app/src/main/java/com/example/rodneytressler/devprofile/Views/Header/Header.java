@@ -8,12 +8,15 @@ import android.view.View;
 import butterknife.ButterKnife;
 import com.example.rodneytressler.devprofile.Di.ApplicationClass;
 import com.example.rodneytressler.devprofile.R;
+import javax.inject.Inject;
 
 /**
  * Created by rodneytressler on 4/16/17.
  */
 
 public class Header extends PercentRelativeLayout implements HeaderView {
+  @Inject protected HeaderPresenter presenter;
+
   public Header(Context context) {
     super(context);
     init(null);
@@ -34,5 +37,10 @@ public class Header extends PercentRelativeLayout implements HeaderView {
     ButterKnife.bind(this, view);
     ((ApplicationClass) getContext().getApplicationContext()).getComponent()
         .inject(this);
+    presenter.setView(this);
+  }
+
+  @Override public void setAboutSelected() {
+
   }
 }
