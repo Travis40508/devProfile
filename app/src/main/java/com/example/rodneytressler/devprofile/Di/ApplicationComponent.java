@@ -3,6 +3,7 @@ package com.example.rodneytressler.devprofile.Di;
 import com.example.rodneytressler.devprofile.StateService.StateServiceModule;
 import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
 import com.example.rodneytressler.devprofile.Views.AndroidScreen.FragmentAndroid;
+import com.example.rodneytressler.devprofile.Views.BeatleBargainsScreen.FragmentBeatleBargains;
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
 import com.example.rodneytressler.devprofile.Views.ExperienceScreen.FragmentExperience;
 import com.example.rodneytressler.devprofile.Views.FactsScreen.FragmentFacts;
@@ -13,6 +14,7 @@ import com.example.rodneytressler.devprofile.Views.RestaurantScreen.FragmentRest
 import com.example.rodneytressler.devprofile.Views.ScribblitScreen.FragmentScribblit;
 import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
 import com.example.rodneytressler.devprofile.Views.TekeScreen.FragmentTekesports;
+import com.example.rodneytressler.devprofile.Views.TicTacToeScreen.FragmentTicTacToe;
 import com.example.rodneytressler.devprofile.Views.WebScreen.FragmentWeb;
 import dagger.Component;
 import javax.inject.Singleton;
@@ -52,4 +54,8 @@ public interface ApplicationComponent {
   void inject(FragmentPowermap fragmentPowermap);
 
   void inject(FragmentWeb fragmentWeb);
+
+  void inject(FragmentBeatleBargains fragmentBeatleBargains);
+
+  void inject(FragmentTicTacToe fragmentTicTacToe);
 }

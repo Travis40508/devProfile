@@ -16,6 +16,7 @@ import com.example.rodneytressler.devprofile.R;
 import com.example.rodneytressler.devprofile.Tools.FragmentUtil;
 import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
 import com.example.rodneytressler.devprofile.Views.AndroidScreen.FragmentAndroid;
+import com.example.rodneytressler.devprofile.Views.BeatleBargainsScreen.FragmentBeatleBargains;
 import com.example.rodneytressler.devprofile.Views.ContactScreen.FragmentContact;
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
 import com.example.rodneytressler.devprofile.Views.ExperienceScreen.FragmentExperience;
@@ -25,6 +26,7 @@ import com.example.rodneytressler.devprofile.Views.RestaurantScreen.FragmentRest
 import com.example.rodneytressler.devprofile.Views.ScribblitScreen.FragmentScribblit;
 import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
 import com.example.rodneytressler.devprofile.Views.TekeScreen.FragmentTekesports;
+import com.example.rodneytressler.devprofile.Views.TicTacToeScreen.FragmentTicTacToe;
 import com.example.rodneytressler.devprofile.Views.WebScreen.FragmentWeb;
 import java.util.ArrayList;
 import java.util.List;
@@ -150,11 +152,13 @@ public class MainActivity extends AppCompatActivity implements MainView{
   }
 
   @Override public void attachBeatles() {
-
+    fragmentUtil.attachFragment(FragmentBeatleBargains.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
   @Override public void attachTicTacToe() {
-
+    fragmentUtil.attachFragment(FragmentTicTacToe.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
   @Override public void attachDeveloperProfile() {

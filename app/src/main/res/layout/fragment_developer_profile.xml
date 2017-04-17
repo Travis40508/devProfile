@@ -6,7 +6,7 @@
 
   <TextView
       android:textColor="#000000"
-      android:text="Skills"
+      android:text="Developer Profile"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       />
