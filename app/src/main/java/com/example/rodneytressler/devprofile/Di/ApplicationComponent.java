@@ -5,6 +5,7 @@ import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
 import com.example.rodneytressler.devprofile.Views.Header.Header;
 import com.example.rodneytressler.devprofile.Views.MainScreen.MainActivity;
+import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
 import dagger.Component;
 import javax.inject.Singleton;
 
@@ -25,4 +26,6 @@ public interface ApplicationComponent {
   void inject(FragmentEducation fragmentEducation);
 
   void inject(FragmentAbout fragmentAbout);
+
+  void inject(FragmentSkills fragmentSkills);
 }

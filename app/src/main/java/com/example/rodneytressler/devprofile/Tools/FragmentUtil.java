@@ -3,6 +3,7 @@ package com.example.rodneytressler.devprofile.Tools;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import javax.inject.Singleton;
 
 /**
  * Created by rodneytressler on 4/16/17.
@@ -13,6 +14,7 @@ public class FragmentUtil {
   public static FragmentManager fragmentManager;
   public static FragmentTransaction fragmentTransaction;
 
+  @Singleton
   public FragmentUtil(FragmentManager fragmentManager) {
     this.fragmentManager = fragmentManager;
   }

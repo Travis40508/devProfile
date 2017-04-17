@@ -18,4 +18,12 @@ public interface MainView {
   void moveToContact();
 
   void attachEducation();
+
+  void attachSkills();
+
+  void attachExperience();
+
+  void attachFacts();
+
+  void detachFragment();
 }

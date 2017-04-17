@@ -1,6 +1,7 @@
 package com.example.rodneytressler.devprofile.Views.MainScreen;
 
 import com.example.rodneytressler.devprofile.StateService.IStateService;
+import java.util.ArrayList;
 import javax.inject.Inject;
 
 /**
@@ -39,6 +40,12 @@ public class MainPresenter {
             getView().moveToContact();
           } else if ((strings.get(strings.size() - 1).contains("education"))) {
             getView().attachEducation();
+          } else if ((strings.get(strings.size() - 1).contains("skills"))) {
+            getView().attachSkills();
+          } else if ((strings.get(strings.size() - 1).contains("experience"))) {
+            getView().attachExperience();
+          } else if ((strings.get(strings.size() - 1).contains("facts"))) {
+            getView().attachFacts();
           }
         });
   }
@@ -49,5 +56,19 @@ public class MainPresenter {
 
   public void setState(String state) {
     iStateService.setState(state);
+  }
+
+  public void backPressed() {
+    iStateService.getStateList()
+        .first(new ArrayList<>())
+        .subscribe(strings -> {
+          if((strings.get(strings.size() - 1).contains("education"))
+              || (strings.get(strings.size() - 1).contains("skills"))
+            || (strings.get(strings.size() - 1).contains("experience"))
+            || (strings.get(strings.size() - 1).contains("facts"))) {
+            iStateService.setState(strings.get(strings.size() - 2));
+            getView().detachFragment();
+          }
+        });
   }
 }

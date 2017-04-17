@@ -18,6 +18,7 @@ import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
 import com.example.rodneytressler.devprofile.Views.AndroidScreen.FragmentAndroid;
 import com.example.rodneytressler.devprofile.Views.ContactScreen.FragmentContact;
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
+import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
 import com.example.rodneytressler.devprofile.Views.WebScreen.FragmentWeb;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,17 +29,17 @@ public class MainActivity extends AppCompatActivity implements MainView{
 
 @Inject protected MainPresenter mainPresenter;
   private FragmentUtil fragmentUtil;
-  List<Fragment> fragmentList = new ArrayList();
+  private List<Fragment> fragmentList = new ArrayList();
   private FragmentPagerAdapter fragmentPagerAdapter;
   @BindView(R.id.view_pager) ViewPager viewPager;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    fragmentUtil = new FragmentUtil(getSupportFragmentManager());
     ((ApplicationClass)getApplication()).getComponent().inject(this);
     setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
 
-    fragmentUtil = new FragmentUtil(getSupportFragmentManager());
     mainPresenter.setView(this);
 
   }
@@ -101,5 +102,27 @@ public class MainActivity extends AppCompatActivity implements MainView{
   @Override public void attachEducation() {
     FragmentUtil.attachFragment(FragmentEducation.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
         R.anim.slide_out_left);
+  }
+
+  @Override public void attachSkills() {
+    FragmentUtil.attachFragment(FragmentSkills.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
+        R.anim.slide_out_left);
+  }
+
+  @Override public void attachExperience() {
+
+  }
+
+  @Override public void attachFacts() {
+
+  }
+
+  @Override public void detachFragment() {
+    FragmentUtil.detachFragment(R.id.frame_layout, R.anim.slide_in_left, R.anim.slide_out_right);
+  }
+
+  @Override public void onBackPressed() {
+    //super.onBackPressed();
+    mainPresenter.backPressed();
   }
 }
