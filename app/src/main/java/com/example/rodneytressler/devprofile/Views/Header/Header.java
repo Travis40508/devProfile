@@ -1,13 +1,16 @@
 package com.example.rodneytressler.devprofile.Views.Header;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.BinderThread;
+import android.support.percent.PercentLayoutHelper;
 import android.support.percent.PercentRelativeLayout;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -25,6 +28,7 @@ public class Header extends PercentRelativeLayout implements HeaderView {
   @BindView(R.id.icon_android) ImageView androidIcon;
   @BindView(R.id.icon_web) ImageView webIcon;
   @BindView(R.id.icon_contact) ImageView contactIcon;
+  @BindView(R.id.header) RelativeLayout header;
   public Header(Context context) {
     super(context);
     init(null);
@@ -70,6 +74,7 @@ public class Header extends PercentRelativeLayout implements HeaderView {
   @Override public void setContactSelected() {
     contactIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_contact_selected));
   }
+
 
   @OnClick({R.id.icon_about_me, R.id.icon_android, R.id.icon_web, R.id.icon_contact})
   public void onClick(View view) {

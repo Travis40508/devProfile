@@ -14,4 +14,5 @@ public interface HeaderView {
   void setWebSelected();
 
   void setContactSelected();
+
 }

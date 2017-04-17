@@ -1,12 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    >
 
   <TextView
-      android:text="About"
+      android:id="@+id/title_about"
+      android:textSize="50sp"
+      android:text="ABOUT"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:textColor="#000000"
+      android:textStyle="bold"
       />
 
-</RelativeLayout>
+  <android.support.percent.PercentRelativeLayout
+      app:layout_widthPercent = "30%"
+      app:layout_heightPercent = "20%"
+      app:layout_marginTopPercent="25%"
+      app:layout_marginLeftPercent="10%"
+      android:background="@drawable/rectangle">
+
+
+  <ImageView
+      android:id="@+id/image_education"
+      android:src="@drawable/ic_education"
+      app:layout_widthPercent = "100%"
+      app:layout_heightPercent = "80%"
+
+      />
+
+  <TextView
+      android:id="@+id/text_education"
+      android:layout_centerHorizontal="true"
+      android:layout_width="wrap_content"
+      app:layout_heightPercent="18%"
+      android:text="Education"
+      android:layout_below="@+id/image_education"
+      android:textColor="#000000"
+
+
+      />
+    </android.support.percent.PercentRelativeLayout>
+
+  <android.support.percent.PercentRelativeLayout
+      app:layout_widthPercent = "30%"
+      app:layout_heightPercent = "20%"
+      app:layout_marginTopPercent="25%"
+      app:layout_marginLeftPercent="60%"
+      android:background="@drawable/rectangle">
+
+
+    <ImageView
+        android:id="@+id/image_skills"
+        android:src="@drawable/ic_skills"
+        app:layout_widthPercent = "100%"
+        app:layout_heightPercent = "80%"
+
+        />
+
+    <TextView
+        android:id="@+id/text_skills"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="18%"
+        android:text="Skills"
+        android:layout_below="@+id/image_skills"
+        android:textColor="#000000"
+
+
+        />
+  </android.support.percent.PercentRelativeLayout>
+
+  <android.support.percent.PercentRelativeLayout
+      app:layout_widthPercent = "30%"
+      app:layout_heightPercent = "20%"
+      app:layout_marginTopPercent="55%"
+      app:layout_marginLeftPercent="10%"
+      android:background="@drawable/rectangle">
+
+
+    <ImageView
+        android:id="@+id/image_experience"
+        android:src="@drawable/ic_experience"
+        app:layout_widthPercent = "100%"
+        app:layout_heightPercent = "80%"
+
+        />
+
+    <TextView
+        android:id="@+id/text_experience"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="18%"
+        android:text="Experience"
+        android:layout_below="@+id/image_experience"
+        android:textColor="#000000"
+
+
+        />
+  </android.support.percent.PercentRelativeLayout>
+
+  <android.support.percent.PercentRelativeLayout
+      app:layout_widthPercent = "30%"
+      app:layout_heightPercent = "20%"
+      app:layout_marginTopPercent="55%"
+      app:layout_marginLeftPercent="60%"
+      android:background="@drawable/rectangle">
+
+
+    <ImageView
+        android:id="@+id/image_facts"
+        android:src="@drawable/ic_facts"
+        app:layout_widthPercent = "100%"
+        app:layout_heightPercent = "80%"
+
+        />
+
+    <TextView
+        android:id="@+id/text_facts"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="18%"
+        android:text="Facts"
+        android:layout_below="@+id/image_facts"
+        android:textColor="#000000"
+
+
+        />
+  </android.support.percent.PercentRelativeLayout>
+
+
+
+
+</android.support.percent.PercentRelativeLayout>

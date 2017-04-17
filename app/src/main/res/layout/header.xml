@@ -1,44 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="60dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
+    android:id="@+id/header"
     >
 
-  <ImageView
-      android:src="@drawable/ic_about_unselected"
-      android:layout_marginStart="15dp"
-      android:id="@+id/icon_about_me"
-      app:layout_widthPercent ="20%"
-      app:layout_heightPercent="100%"
-      android:layout_alignParentStart="true"/>
+  <android.support.percent.PercentRelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+    <ImageView
+        android:src="@drawable/ic_about_unselected"
+        android:layout_marginStart="15dp"
+        android:id="@+id/icon_about_me"
+        app:layout_widthPercent ="20%"
+        app:layout_heightPercent="100%"
+        android:layout_alignParentStart="true"/>
 
-  <ImageView
-      android:src="@drawable/ic_android_unselected"
-      android:id="@+id/icon_android"
-      app:layout_widthPercent ="20%"
-      app:layout_heightPercent="100%"
-      android:layout_toRightOf="@id/icon_about_me"
-      android:layout_marginStart="15dp"
-      />
+    <ImageView
+        android:src="@drawable/ic_android_unselected"
+        android:id="@+id/icon_android"
+        app:layout_widthPercent ="20%"
+        app:layout_heightPercent="100%"
+        android:layout_toRightOf="@id/icon_about_me"
+        android:layout_marginStart="15dp"
+        />
 
-  <ImageView
-      android:src="@drawable/ic_web_unselected"
-      android:id="@+id/icon_web"
-      app:layout_widthPercent ="20%"
-      app:layout_heightPercent="100%"
-      android:layout_toRightOf="@id/icon_android"
-      android:layout_marginStart="20dp"
-      />
+    <ImageView
+        android:src="@drawable/ic_web_unselected"
+        android:id="@+id/icon_web"
+        app:layout_widthPercent ="20%"
+        app:layout_heightPercent="100%"
+        android:layout_toRightOf="@id/icon_android"
+        android:layout_marginStart="20dp"
+        />
 
-  <ImageView
-      android:src="@drawable/ic_contact_unselected"
-      android:id="@+id/icon_contact"
-      app:layout_widthPercent ="20%"
-      app:layout_heightPercent="100%"
-      android:layout_toRightOf="@id/icon_web"
-      android:layout_marginStart="15dp"/>
+    <ImageView
+        android:src="@drawable/ic_contact_unselected"
+        android:id="@+id/icon_contact"
+        app:layout_widthPercent ="20%"
+        app:layout_heightPercent="100%"
+        android:layout_toRightOf="@id/icon_web"
+        android:layout_marginStart="15dp"/>
+  </android.support.percent.PercentRelativeLayout>
 
 
-</android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>
