@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    >
+
+  <ImageView
+      android:id="@+id/image_uk"
+      android:src="@drawable/image_uk"
+      app:layout_widthPercent ="100%"
+      app:layout_heightPercent="65%"/>
 
   <TextView
+      android:id="@+id/text_ba"
+      android:fontFamily="sans-serif-smallcaps"
+      android:layout_below="@id/image_uk"
+      app:layout_marginTopPercent="5%"
+      android:textSize="30sp"
+      android:text="B.A. - Philosophy"
       android:textColor="#000000"
-      android:text="Education"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:textStyle="bold"
       />
 
-</RelativeLayout>
+  <TextView
+      android:id="@+id/text_graduated"
+      android:fontFamily="sans-serif-smallcaps"
+      android:layout_below="@id/text_ba"
+      app:layout_marginTopPercent="5%"
+      android:textSize="30sp"
+      android:text="Class Of 2012"
+      android:textColor="#000000"
+      android:layout_width="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:textStyle="bold"
+      />
+
+</android.support.percent.PercentRelativeLayout>
