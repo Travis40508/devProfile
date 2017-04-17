@@ -1,13 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    >
 
   <TextView
-      android:text="Web"
+      android:id="@+id/title_web"
+      android:textSize="50sp"
+      android:text="WEB"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      android:fontFamily="serif-monospace"
       />
 
-</LinearLayout>
+  <android.support.percent.PercentRelativeLayout
+      app:layout_widthPercent = "30%"
+      app:layout_heightPercent = "20%"
+      app:layout_marginTopPercent="25%"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/rectangle">
+
+
+    <ImageView
+        android:id="@+id/image_beatles"
+        android:src="@drawable/ic_beatles"
+        app:layout_widthPercent = "100%"
+        app:layout_heightPercent = "80%"
+
+        />
+
+    <TextView
+        android:id="@+id/text_beatles"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="18%"
+        android:text="Beatle Bargains"
+        android:layout_below="@+id/image_beatles"
+        android:textColor="#000000"
+
+
+        />
+  </android.support.percent.PercentRelativeLayout>
+
+
+
+  <android.support.percent.PercentRelativeLayout
+      app:layout_widthPercent = "30%"
+      app:layout_heightPercent = "20%"
+      app:layout_marginTopPercent="55%"
+      app:layout_marginLeftPercent="10%"
+      android:background="@drawable/rectangle">
+
+
+    <ImageView
+        android:id="@+id/image_tictactoe"
+        android:src="@drawable/ic_tictactoe"
+        app:layout_widthPercent = "100%"
+        app:layout_heightPercent = "80%"
+
+        />
+
+    <TextView
+        android:id="@+id/text_tictactoe"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="18%"
+        android:text="Tic-Tac-Toe"
+        android:layout_below="@+id/image_tictactoe"
+        android:textColor="#000000"
+
+
+        />
+  </android.support.percent.PercentRelativeLayout>
+
+  <android.support.percent.PercentRelativeLayout
+      app:layout_widthPercent = "30%"
+      app:layout_heightPercent = "20%"
+      app:layout_marginTopPercent="55%"
+      app:layout_marginLeftPercent="60%"
+      android:background="@drawable/rectangle">
+
+
+    <ImageView
+        android:id="@+id/image_dev_profile"
+        android:src="@drawable/ic_dev_profile"
+        app:layout_widthPercent = "100%"
+        app:layout_heightPercent = "80%"
+
+        />
+
+    <TextView
+        android:id="@+id/text_dev_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="18%"
+        android:text="Developer Profile"
+        android:layout_below="@+id/image_dev_profile"
+        android:textColor="#000000"
+
+
+        />
+  </android.support.percent.PercentRelativeLayout>
+
+
+
+
+</android.support.percent.PercentRelativeLayout>

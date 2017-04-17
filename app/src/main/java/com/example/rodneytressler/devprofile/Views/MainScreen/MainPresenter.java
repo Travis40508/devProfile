@@ -37,6 +37,8 @@ public class MainPresenter {
             getView().moveToWeb();
           } else if ((strings.get(strings.size() - 1).contains("contact"))) {
             getView().moveToContact();
+          } else if ((strings.get(strings.size() - 1).contains("education"))) {
+            getView().attachEducation();
           }
         });
   }

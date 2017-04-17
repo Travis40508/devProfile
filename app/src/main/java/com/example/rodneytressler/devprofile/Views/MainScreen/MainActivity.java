@@ -17,6 +17,7 @@ import com.example.rodneytressler.devprofile.Tools.FragmentUtil;
 import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
 import com.example.rodneytressler.devprofile.Views.AndroidScreen.FragmentAndroid;
 import com.example.rodneytressler.devprofile.Views.ContactScreen.FragmentContact;
+import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
 import com.example.rodneytressler.devprofile.Views.WebScreen.FragmentWeb;
 import java.util.ArrayList;
 import java.util.List;
@@ -95,5 +96,10 @@ public class MainActivity extends AppCompatActivity implements MainView{
 
   @Override public void moveToContact() {
     viewPager.setCurrentItem(3);
+  }
+
+  @Override public void attachEducation() {
+    FragmentUtil.attachFragment(FragmentEducation.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
+        R.anim.slide_out_left);
   }
 }

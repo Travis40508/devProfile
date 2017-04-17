@@ -16,4 +16,6 @@ public interface MainView {
   void moveToWeb();
 
   void moveToContact();
+
+  void attachEducation();
 }
