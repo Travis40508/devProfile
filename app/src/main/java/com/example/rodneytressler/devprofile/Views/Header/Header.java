@@ -49,7 +49,26 @@ public class Header extends PercentRelativeLayout implements HeaderView {
   }
 
   @Override public void setAboutSelected() {
-    Log.d("@@@@", "you are a god...");
+    aboutIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_about_selected));
+  }
+
+  @Override public void unSelectAllIcons() {
+    aboutIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_about_unselected));
+    androidIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_android_unselected));
+    webIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_web_unselected));
+    contactIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_contact_unselected));
+  }
+
+  @Override public void setAndroidSelected() {
+    androidIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_android_selected));
+  }
+
+  @Override public void setWebSelected() {
+    webIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_web_selected));
+  }
+
+  @Override public void setContactSelected() {
+    contactIcon.setImageDrawable(getResources().getDrawable(R.drawable.ic_contact_selected));
   }
 
   @OnClick({R.id.icon_about_me, R.id.icon_android, R.id.icon_web, R.id.icon_contact})

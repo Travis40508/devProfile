@@ -28,7 +28,17 @@ public class HeaderPresenter {
     iStateService.getStateList()
         .subscribe(strings -> {
           if((strings.get(strings.size() - 1).contains("about"))) {
+            getView().unSelectAllIcons();
             getView().setAboutSelected();
+          } else if((strings.get(strings.size() - 1).contains("android"))) {
+            getView().unSelectAllIcons();
+            getView().setAndroidSelected();
+          } else if ((strings.get(strings.size() - 1).contains("web"))) {
+            getView().unSelectAllIcons();
+            getView().setWebSelected();
+          } else if ((strings.get(strings.size() - 1).contains("contact"))) {
+            getView().unSelectAllIcons();
+            getView().setContactSelected();
           }
         });
   }

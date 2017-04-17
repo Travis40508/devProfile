@@ -6,4 +6,12 @@ package com.example.rodneytressler.devprofile.Views.Header;
 
 public interface HeaderView {
   void setAboutSelected();
+
+  void unSelectAllIcons();
+
+  void setAndroidSelected();
+
+  void setWebSelected();
+
+  void setContactSelected();
 }
