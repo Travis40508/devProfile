@@ -73,6 +73,8 @@ public class FragmentContact extends Fragment implements ContactView{
   }
 
   @Override public void openLinkedIn() {
-
+    Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+        Uri.parse("https://www.linkedin.com/in/travis-tressler-a123a665/"));
+    startActivity(browserIntent);
   }
 }
