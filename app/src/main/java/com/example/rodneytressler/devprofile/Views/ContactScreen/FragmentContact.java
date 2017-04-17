@@ -65,7 +65,11 @@ public class FragmentContact extends Fragment implements ContactView{
   }
 
   @Override public void sendEmail() {
-
+    Intent intent = new Intent(Intent.ACTION_SEND);
+    intent.setType("plain/text");
+    intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "r.travis.tressler@gmail.com" });
+    intent.putExtra(Intent.EXTRA_SUBJECT, "About Your App...");
+    startActivity(Intent.createChooser(intent, ""));
   }
 
   @Override public void openLinkedIn() {
