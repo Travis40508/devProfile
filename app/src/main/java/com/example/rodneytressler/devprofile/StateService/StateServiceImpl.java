@@ -1,6 +1,7 @@
 package com.example.rodneytressler.devprofile.StateService;
 
 import io.reactivex.subjects.BehaviorSubject;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,6 +16,14 @@ public class StateServiceImpl implements IStateService {
 
   public StateServiceImpl() {
     stateList = BehaviorSubject.create();
+    init();
+  }
+
+  public void init() {
+    ArrayList<String> newState = new ArrayList<>();
+    newState.add("about");
+
+    stateList.onNext(newState);
   }
 
   @Override public void setState(String state) {

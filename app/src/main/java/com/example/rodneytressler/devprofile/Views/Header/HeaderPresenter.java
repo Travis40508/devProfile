@@ -36,4 +36,8 @@ public class HeaderPresenter {
   public HeaderView getView() {
     return view;
   }
+
+  public void buttonClicked(String button) {
+    iStateService.setState(button);
+  }
 }

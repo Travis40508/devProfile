@@ -1,11 +1,16 @@
 package com.example.rodneytressler.devprofile.Views.Header;
 
 import android.content.Context;
+import android.support.annotation.BinderThread;
 import android.support.percent.PercentRelativeLayout;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import com.example.rodneytressler.devprofile.Di.ApplicationClass;
 import com.example.rodneytressler.devprofile.R;
 import javax.inject.Inject;
@@ -16,7 +21,10 @@ import javax.inject.Inject;
 
 public class Header extends PercentRelativeLayout implements HeaderView {
   @Inject protected HeaderPresenter presenter;
-
+  @BindView(R.id.icon_about_me) ImageView aboutIcon;
+  @BindView(R.id.icon_android) ImageView androidIcon;
+  @BindView(R.id.icon_web) ImageView webIcon;
+  @BindView(R.id.icon_contact) ImageView contactIcon;
   public Header(Context context) {
     super(context);
     init(null);
@@ -41,6 +49,24 @@ public class Header extends PercentRelativeLayout implements HeaderView {
   }
 
   @Override public void setAboutSelected() {
+    Log.d("@@@@", "you are a god...");
+  }
 
+  @OnClick({R.id.icon_about_me, R.id.icon_android, R.id.icon_web, R.id.icon_contact})
+  public void onClick(View view) {
+    switch (view.getId()) {
+      case R.id.icon_about_me :
+        presenter.buttonClicked("about");
+        break;
+      case R.id.icon_android :
+        presenter.buttonClicked("android");
+        break;
+      case R.id.icon_web :
+        presenter.buttonClicked("web");
+        break;
+      case R.id.icon_contact :
+        presenter.buttonClicked("contact");
+        break;
+    }
   }
 }
