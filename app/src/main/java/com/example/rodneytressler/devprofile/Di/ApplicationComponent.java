@@ -8,8 +8,11 @@ import com.example.rodneytressler.devprofile.Views.ExperienceScreen.FragmentExpe
 import com.example.rodneytressler.devprofile.Views.FactsScreen.FragmentFacts;
 import com.example.rodneytressler.devprofile.Views.Header.Header;
 import com.example.rodneytressler.devprofile.Views.MainScreen.MainActivity;
+import com.example.rodneytressler.devprofile.Views.PowermapScreen.FragmentPowermap;
 import com.example.rodneytressler.devprofile.Views.RestaurantScreen.FragmentRestaurant;
+import com.example.rodneytressler.devprofile.Views.ScribblitScreen.FragmentScribblit;
 import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
+import com.example.rodneytressler.devprofile.Views.TekeScreen.FragmentTekesports;
 import dagger.Component;
 import javax.inject.Singleton;
 
@@ -40,4 +43,10 @@ public interface ApplicationComponent {
   void inject(FragmentAndroid fragmentAndroid);
 
   void inject(FragmentRestaurant fragmentRestaurant);
+
+  void inject(FragmentTekesports fragmentTekesports);
+
+  void inject(FragmentScribblit fragmentScribblit);
+
+  void inject(FragmentPowermap fragmentPowermap);
 }

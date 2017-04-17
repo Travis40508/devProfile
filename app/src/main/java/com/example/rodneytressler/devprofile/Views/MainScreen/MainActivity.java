@@ -20,8 +20,11 @@ import com.example.rodneytressler.devprofile.Views.ContactScreen.FragmentContact
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
 import com.example.rodneytressler.devprofile.Views.ExperienceScreen.FragmentExperience;
 import com.example.rodneytressler.devprofile.Views.FactsScreen.FragmentFacts;
+import com.example.rodneytressler.devprofile.Views.PowermapScreen.FragmentPowermap;
 import com.example.rodneytressler.devprofile.Views.RestaurantScreen.FragmentRestaurant;
+import com.example.rodneytressler.devprofile.Views.ScribblitScreen.FragmentScribblit;
 import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
+import com.example.rodneytressler.devprofile.Views.TekeScreen.FragmentTekesports;
 import com.example.rodneytressler.devprofile.Views.WebScreen.FragmentWeb;
 import java.util.ArrayList;
 import java.util.List;
@@ -132,15 +135,18 @@ public class MainActivity extends AppCompatActivity implements MainView{
   }
 
   @Override public void attachTekeSports() {
-
+    fragmentUtil.attachFragment(FragmentTekesports.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
   @Override public void attachScribblit() {
-
+    fragmentUtil.attachFragment(FragmentScribblit.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
   @Override public void attachPowerMap() {
-
+    fragmentUtil.attachFragment(FragmentPowermap.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
   @Override public void onBackPressed() {
