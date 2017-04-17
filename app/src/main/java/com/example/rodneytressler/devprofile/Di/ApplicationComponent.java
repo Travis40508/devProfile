@@ -1,6 +1,7 @@
 package com.example.rodneytressler.devprofile.Di;
 
 import com.example.rodneytressler.devprofile.StateService.StateServiceModule;
+import com.example.rodneytressler.devprofile.Views.Header.Header;
 import com.example.rodneytressler.devprofile.Views.MainScreen.MainActivity;
 import dagger.Component;
 import javax.inject.Singleton;
@@ -15,4 +16,5 @@ public interface ApplicationComponent {
 
   void inject(ApplicationClass target);
   void inject(MainActivity mainActivity);
+  void inject(Header header);
 }
