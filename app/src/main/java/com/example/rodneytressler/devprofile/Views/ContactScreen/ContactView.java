@@ -5,4 +5,9 @@ package com.example.rodneytressler.devprofile.Views.ContactScreen;
  */
 
 public interface ContactView {
+  void callNumber();
+
+  void sendEmail();
+
+  void openLinkedIn();
 }
