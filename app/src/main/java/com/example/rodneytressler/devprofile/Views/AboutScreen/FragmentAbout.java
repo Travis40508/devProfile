@@ -13,7 +13,7 @@ import com.example.rodneytressler.devprofile.R;
  * Created by rodneytressler on 4/16/17.
  */
 
-public class FragmentAbout extends Fragment {
+public class FragmentAbout extends Fragment implements AboutView{
 
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,

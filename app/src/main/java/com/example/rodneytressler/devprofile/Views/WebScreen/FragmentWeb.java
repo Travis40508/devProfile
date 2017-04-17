@@ -13,7 +13,7 @@ import com.example.rodneytressler.devprofile.R;
  * Created by rodneytressler on 4/16/17.
  */
 
-public class FragmentWeb extends Fragment {
+public class FragmentWeb extends Fragment implements  WebView{
 
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
