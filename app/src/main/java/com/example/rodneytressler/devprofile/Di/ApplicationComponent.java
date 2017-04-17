@@ -13,6 +13,7 @@ import com.example.rodneytressler.devprofile.Views.RestaurantScreen.FragmentRest
 import com.example.rodneytressler.devprofile.Views.ScribblitScreen.FragmentScribblit;
 import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
 import com.example.rodneytressler.devprofile.Views.TekeScreen.FragmentTekesports;
+import com.example.rodneytressler.devprofile.Views.WebScreen.FragmentWeb;
 import dagger.Component;
 import javax.inject.Singleton;
 
@@ -49,4 +50,6 @@ public interface ApplicationComponent {
   void inject(FragmentScribblit fragmentScribblit);
 
   void inject(FragmentPowermap fragmentPowermap);
+
+  void inject(FragmentWeb fragmentWeb);
 }

@@ -34,4 +34,10 @@ public interface MainView {
   void attachScribblit();
 
   void attachPowerMap();
+
+  void attachBeatles();
+
+  void attachTicTacToe();
+
+  void attachDeveloperProfile();
 }

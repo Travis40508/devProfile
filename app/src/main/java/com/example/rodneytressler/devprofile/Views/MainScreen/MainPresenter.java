@@ -54,6 +54,12 @@ public class MainPresenter {
             getView().attachScribblit();
           } else if ((strings.get(strings.size() - 1).contains("powermap"))) {
             getView().attachPowerMap();
+          } else if ((strings.get(strings.size() - 1).contains("beatles"))) {
+            getView().attachBeatles();
+          } else if ((strings.get(strings.size() - 1).contains("tictactoe"))) {
+            getView().attachTicTacToe();
+          } else if ((strings.get(strings.size() - 1).contains("developer"))) {
+            getView().attachDeveloperProfile();
           }
         });
   }

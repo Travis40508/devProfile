@@ -149,6 +149,18 @@ public class MainActivity extends AppCompatActivity implements MainView{
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
+  @Override public void attachBeatles() {
+
+  }
+
+  @Override public void attachTicTacToe() {
+
+  }
+
+  @Override public void attachDeveloperProfile() {
+
+  }
+
   @Override public void onBackPressed() {
     //super.onBackPressed();
     mainPresenter.backPressed();
