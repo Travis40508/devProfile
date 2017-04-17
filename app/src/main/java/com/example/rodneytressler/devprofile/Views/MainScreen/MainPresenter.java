@@ -83,7 +83,11 @@ public class MainPresenter {
           || (strings.get(strings.size() - 1).contains("restaurant"))
               || (strings.get(strings.size() - 1).contains("tekesports"))
               || (strings.get(strings.size() - 1).contains("scribblit"))
-              || (strings.get(strings.size() - 1).contains("powermap"))){
+              || (strings.get(strings.size() - 1).contains("powermap"))
+              || (strings.get(strings.size() - 1).contains("beatles"))
+              || (strings.get(strings.size() - 1).contains("tictactoe"))
+              || (strings.get(strings.size() - 1).contains("developer")))
+          {
             iStateService.setState(strings.get(strings.size() - 2));
             getView().detachFragment();
           }
