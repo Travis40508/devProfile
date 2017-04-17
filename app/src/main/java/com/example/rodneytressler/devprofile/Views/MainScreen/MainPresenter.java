@@ -46,6 +46,14 @@ public class MainPresenter {
             getView().attachExperience();
           } else if ((strings.get(strings.size() - 1).contains("facts"))) {
             getView().attachFacts();
+          } else if ((strings.get(strings.size() - 1).contains("restaurant"))) {
+            getView().attachRestaurant();
+          } else if ((strings.get(strings.size() - 1).contains("tekesports"))) {
+            getView().attachTekeSports();
+          } else if ((strings.get(strings.size() - 1).contains("scribblit"))) {
+            getView().attachScribblit();
+          } else if ((strings.get(strings.size() - 1).contains("powermap"))) {
+            getView().attachPowerMap();
           }
         });
   }
@@ -65,7 +73,11 @@ public class MainPresenter {
           if((strings.get(strings.size() - 1).contains("education"))
               || (strings.get(strings.size() - 1).contains("skills"))
             || (strings.get(strings.size() - 1).contains("experience"))
-            || (strings.get(strings.size() - 1).contains("facts"))) {
+            || (strings.get(strings.size() - 1).contains("facts"))
+          || (strings.get(strings.size() - 1).contains("restaurant"))
+              || (strings.get(strings.size() - 1).contains("tekesports"))
+              || (strings.get(strings.size() - 1).contains("scribblit"))
+              || (strings.get(strings.size() - 1).contains("powermap"))){
             iStateService.setState(strings.get(strings.size() - 2));
             getView().detachFragment();
           }

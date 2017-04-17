@@ -2,9 +2,13 @@ package com.example.rodneytressler.devprofile.Di;
 
 import com.example.rodneytressler.devprofile.StateService.StateServiceModule;
 import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
+import com.example.rodneytressler.devprofile.Views.AndroidScreen.FragmentAndroid;
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
+import com.example.rodneytressler.devprofile.Views.ExperienceScreen.FragmentExperience;
+import com.example.rodneytressler.devprofile.Views.FactsScreen.FragmentFacts;
 import com.example.rodneytressler.devprofile.Views.Header.Header;
 import com.example.rodneytressler.devprofile.Views.MainScreen.MainActivity;
+import com.example.rodneytressler.devprofile.Views.RestaurantScreen.FragmentRestaurant;
 import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
 import dagger.Component;
 import javax.inject.Singleton;
@@ -28,4 +32,12 @@ public interface ApplicationComponent {
   void inject(FragmentAbout fragmentAbout);
 
   void inject(FragmentSkills fragmentSkills);
+
+  void inject(FragmentExperience fragmentExperience);
+
+  void inject(FragmentFacts fragmentFacts);
+
+  void inject(FragmentAndroid fragmentAndroid);
+
+  void inject(FragmentRestaurant fragmentRestaurant);
 }

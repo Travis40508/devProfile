@@ -18,6 +18,9 @@ import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
 import com.example.rodneytressler.devprofile.Views.AndroidScreen.FragmentAndroid;
 import com.example.rodneytressler.devprofile.Views.ContactScreen.FragmentContact;
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
+import com.example.rodneytressler.devprofile.Views.ExperienceScreen.FragmentExperience;
+import com.example.rodneytressler.devprofile.Views.FactsScreen.FragmentFacts;
+import com.example.rodneytressler.devprofile.Views.RestaurantScreen.FragmentRestaurant;
 import com.example.rodneytressler.devprofile.Views.SkillsScreen.FragmentSkills;
 import com.example.rodneytressler.devprofile.Views.WebScreen.FragmentWeb;
 import java.util.ArrayList;
@@ -100,25 +103,44 @@ public class MainActivity extends AppCompatActivity implements MainView{
   }
 
   @Override public void attachEducation() {
-    FragmentUtil.attachFragment(FragmentEducation.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
+    fragmentUtil.attachFragment(FragmentEducation.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
         R.anim.slide_out_left);
   }
 
   @Override public void attachSkills() {
-    FragmentUtil.attachFragment(FragmentSkills.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
+    fragmentUtil.attachFragment(FragmentSkills.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
         R.anim.slide_out_left);
   }
 
   @Override public void attachExperience() {
-
+    fragmentUtil.attachFragment(FragmentExperience.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
   @Override public void attachFacts() {
-
+    fragmentUtil.attachFragment(FragmentFacts.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
   @Override public void detachFragment() {
-    FragmentUtil.detachFragment(R.id.frame_layout, R.anim.slide_in_left, R.anim.slide_out_right);
+    fragmentUtil.detachFragment(R.id.frame_layout, R.anim.slide_in_left, R.anim.slide_out_right);
+  }
+
+  @Override public void attachRestaurant() {
+    fragmentUtil.attachFragment(FragmentRestaurant.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
+  }
+
+  @Override public void attachTekeSports() {
+
+  }
+
+  @Override public void attachScribblit() {
+
+  }
+
+  @Override public void attachPowerMap() {
+
   }
 
   @Override public void onBackPressed() {

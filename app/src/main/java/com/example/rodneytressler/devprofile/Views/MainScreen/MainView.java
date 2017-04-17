@@ -26,4 +26,12 @@ public interface MainView {
   void attachFacts();
 
   void detachFragment();
+
+  void attachRestaurant();
+
+  void attachTekeSports();
+
+  void attachScribblit();
+
+  void attachPowerMap();
 }
