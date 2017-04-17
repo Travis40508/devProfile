@@ -18,6 +18,7 @@ import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
 import com.example.rodneytressler.devprofile.Views.AndroidScreen.FragmentAndroid;
 import com.example.rodneytressler.devprofile.Views.BeatleBargainsScreen.FragmentBeatleBargains;
 import com.example.rodneytressler.devprofile.Views.ContactScreen.FragmentContact;
+import com.example.rodneytressler.devprofile.Views.DeveloperProfileScreen.FragmentDeveloperProfile;
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
 import com.example.rodneytressler.devprofile.Views.ExperienceScreen.FragmentExperience;
 import com.example.rodneytressler.devprofile.Views.FactsScreen.FragmentFacts;
@@ -162,7 +163,8 @@ public class MainActivity extends AppCompatActivity implements MainView{
   }
 
   @Override public void attachDeveloperProfile() {
-
+    fragmentUtil.attachFragment(FragmentDeveloperProfile.newInstance(), R.id.frame_layout,
+        R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
   @Override public void onBackPressed() {

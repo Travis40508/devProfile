@@ -4,6 +4,7 @@ import com.example.rodneytressler.devprofile.StateService.StateServiceModule;
 import com.example.rodneytressler.devprofile.Views.AboutScreen.FragmentAbout;
 import com.example.rodneytressler.devprofile.Views.AndroidScreen.FragmentAndroid;
 import com.example.rodneytressler.devprofile.Views.BeatleBargainsScreen.FragmentBeatleBargains;
+import com.example.rodneytressler.devprofile.Views.DeveloperProfileScreen.FragmentDeveloperProfile;
 import com.example.rodneytressler.devprofile.Views.EducationScreen.FragmentEducation;
 import com.example.rodneytressler.devprofile.Views.ExperienceScreen.FragmentExperience;
 import com.example.rodneytressler.devprofile.Views.FactsScreen.FragmentFacts;
@@ -58,4 +59,6 @@ public interface ApplicationComponent {
   void inject(FragmentBeatleBargains fragmentBeatleBargains);
 
   void inject(FragmentTicTacToe fragmentTicTacToe);
+
+  void inject(FragmentDeveloperProfile fragmentDeveloperProfile);
 }
