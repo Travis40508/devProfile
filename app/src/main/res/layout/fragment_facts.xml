@@ -7,63 +7,16 @@
     android:clickable="true"
     >
 
-  <ImageView
-      app:layout_marginTopPercent="3%"
-      android:id="@+id/image_technophile"
-      android:src="@drawable/technophile"
-      android:layout_width="match_parent"
-      app:layout_heightPercent = "20%"/>
-
   <TextView
-      app:layout_marginTopPercent="3%"
-      android:id="@+id/text_technophile"
-      android:layout_centerHorizontal="true"
+      android:id="@+id/text_facts"
       android:fontFamily="sans-serif-smallcaps"
       android:textStyle="bold"
       android:textSize="30sp"
-      android:layout_below="@id/image_technophile"
-      android:text="Technophile"
-      android:textColor="#000000"
-      android:layout_width="wrap_content"/>
-
-  <ImageView
-      app:layout_marginTopPercent="3%"
-      android:id="@+id/image_nature"
-      android:src="@drawable/nature"
-      android:layout_width="match_parent"
-      app:layout_heightPercent = "20%"
-      android:layout_below="@id/text_technophile"/>
-
-  <TextView
-      app:layout_marginTopPercent="3%"
-      android:id="@+id/text_nature"
       android:layout_centerHorizontal="true"
-      android:fontFamily="sans-serif-smallcaps"
-      android:textStyle="bold"
-      android:textSize="30sp"
-      android:layout_below="@id/image_nature"
-      android:text="Nature Lover"
       android:textColor="#000000"
-      android:layout_width="wrap_content"/>
-
-  <ImageView
-      app:layout_marginTopPercent="3%"
-      android:id="@+id/image_retro"
-      android:src="@drawable/retro"
-      android:layout_width="match_parent"
-      app:layout_heightPercent = "20%"
-      android:layout_below="@id/text_nature"/>
-
-  <TextView
-      app:layout_marginTopPercent="3%"
-      android:id="@+id/text_retro"
-      android:layout_centerHorizontal="true"
-      android:fontFamily="sans-serif-smallcaps"
-      android:textStyle="bold"
-      android:textSize="30sp"
-      android:layout_below="@id/image_retro"
-      android:text="Retro Gamer"
-      android:textColor="#000000"
-      android:layout_width="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:layout_marginTop="30dp"
+      android:text="&#8226; Technophile \n\n&#8226; Nature Lover \n\n&#8226; Retro Gamer \n\n&#8226; Activist \n\n&#8226; Some-What Bilingual\n\n&#8226; 151 WPM Typing Speed\n\n&#8226; Record Collector"/>
 
 </android.support.percent.PercentRelativeLayout>

@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
-    android:clickable="true">
+    android:clickable="true"
+    >
 
-  <TextView
-      android:text="Restaurant"
-      android:textColor="#000000"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+  <ImageView
+      android:id="@+id/image_restaurant_fragment"
+      app:layout_heightPercent = "50%"
+      app:layout_widthPercent = "100%"
+      android:src="@drawable/restaurant"
       />
 
-</RelativeLayout>
+  <TextView
+      android:id="@+id/text_restaurant_fragment"
+      android:layout_below="@id/image_restaurant_fragment"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:textColor="#000000"
+      android:fontFamily="sans-serif-smallcaps"
+      android:textStyle="bold"
+      android:textSize="25sp"
+      android:text="\n&#8226; First Ever Application\n\n&#8226; Used Firebase to Store Restaurant Data\n\n&#8226; Used Google Maps API for Directions to Chosen Restaurant"/>
+
+</android.support.percent.PercentRelativeLayout>
