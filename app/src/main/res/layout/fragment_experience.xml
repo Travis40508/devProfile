@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    >
+
+
+  <ImageView
+      android:id="@+id/image_eleven_fifty"
+      android:src="@drawable/eleven_fifty"
+      app:layout_widthPercent = "100%"
+      app:layout_heightPercent = "20%"/>
 
   <TextView
-      android:textColor="#000000"
-      android:text="Experience"
+      android:gravity="center_horizontal"
+      android:id="@+id/text_eleven_fifty"
+      android:fontFamily="sans-serif-smallcaps"
+      android:textSize="20sp"
+      android:layout_below="@id/image_eleven_fifty"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      app:layout_heightPercent = "30%"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      android:text="&#8226; August 2016 - December 2016. \n \n
+&#8226; Completed Eleven Fifty Academy Bootcamp \n
+&#8226; Acquired Golden Badge for Web Proficiency. \n
+&#8226; Acquired Red Badge for Mobile Proficiency."
       />
 
-</RelativeLayout>
+  <ImageView
+      android:id="@+id/image_interapt"
+      android:src="@drawable/interapt"
+      app:layout_widthPercent = "100%"
+      app:layout_heightPercent = "20%"
+      android:layout_below="@id/text_eleven_fifty"/>
+
+  <TextView
+      android:gravity="center_horizontal"
+      android:id="@+id/text_interapt"
+      android:fontFamily="sans-serif-smallcaps"
+      android:textSize="20sp"
+      android:layout_below="@id/image_interapt"
+      android:layout_width="wrap_content"
+      app:layout_heightPercent = "30%"
+      android:textStyle="bold"
+      android:textColor="#000000"
+      android:text="&#8226; January 2017 - Present \n \n
+&#8226; Completed Four Month Internship. \n
+&#8226; Acquired Android Skillset. \n
+&#8226; Worked on Multiple Production Applications."
+      />
+
+</android.support.percent.PercentRelativeLayout>

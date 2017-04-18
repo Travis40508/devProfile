@@ -40,4 +40,6 @@ public interface MainView {
   void attachTicTacToe();
 
   void attachDeveloperProfile();
+
+  void superBack();
 }

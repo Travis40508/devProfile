@@ -90,6 +90,8 @@ public class MainPresenter {
           {
             iStateService.setState(strings.get(strings.size() - 2));
             getView().detachFragment();
+          } else {
+            getView().superBack();
           }
         });
   }

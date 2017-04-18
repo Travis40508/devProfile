@@ -7,6 +7,7 @@
     >
 
   <ImageView
+      android:layout_alignParentTop="true"
       android:id="@+id/image_uk"
       android:src="@drawable/image_uk"
       app:layout_widthPercent ="100%"

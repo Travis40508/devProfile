@@ -167,6 +167,10 @@ public class MainActivity extends AppCompatActivity implements MainView{
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
+  @Override public void superBack() {
+    super.onBackPressed();
+  }
+
   @Override public void onBackPressed() {
     //super.onBackPressed();
     mainPresenter.backPressed();
