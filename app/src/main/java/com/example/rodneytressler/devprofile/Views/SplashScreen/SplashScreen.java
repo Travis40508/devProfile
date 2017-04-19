@@ -1,4 +1,4 @@
-package com.example.rodneytressler.devprofile.Views;
+package com.example.rodneytressler.devprofile.Views.SplashScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import com.example.rodneytressler.devprofile.Views.MainScreen.MainActivity;
  */
 
 public class SplashScreen extends AppCompatActivity {
-  private final int SPLASH_DISPLAY_LENGTH = 2000;
+  private final int SPLASH_DISPLAY_LENGTH = 4000;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);

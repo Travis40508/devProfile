@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#151515"
+    >
 
   <TextView
-      android:text="Splash Screen"
+      android:fontFamily="sans-serif-smallcaps"
+      android:textSize="40sp"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      />
+      android:textColor="#FFFFFE"
+      android:gravity="center_horizontal"
+      android:text="Rodney 'Travis' Tressler"
+      android:layout_marginTop="30dp"
+      android:textStyle="bold"
+      android:layout_alignParentTop="true"/>
 
-</RelativeLayout>
+  <ImageView
+      app:layout_widthPercent = "100%"
+      app:layout_heightPercent = "50%"
+      android:layout_centerVertical="true"
+      android:src="@drawable/image_splash_screen"/>
+
+  <TextView
+      android:fontFamily="sans-serif-smallcaps"
+      android:textSize="40sp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#FFFFFE"
+      android:gravity="center"
+      android:text="Professional Developer Profile"
+      android:textStyle="bold"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="20dp"/>
+
+
+
+</android.support.percent.PercentRelativeLayout>
