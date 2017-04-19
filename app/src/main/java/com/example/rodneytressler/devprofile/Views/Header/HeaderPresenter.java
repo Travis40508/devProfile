@@ -11,6 +11,7 @@ public class HeaderPresenter {
   private IStateService iStateService;
 
   private HeaderView view;
+  private String currentState;
 
   @Inject
   public HeaderPresenter(IStateService iStateService) {
@@ -27,16 +28,17 @@ public class HeaderPresenter {
   private void listenForStateChanges() {
     iStateService.getStateList()
         .subscribe(strings -> {
-          if((strings.get(strings.size() - 1).contains("about"))) {
+          currentState = strings.get(strings.size() - 1);
+          if(currentState.contains("about")) {
             getView().unSelectAllIcons();
             getView().setAboutSelected();
-          } else if((strings.get(strings.size() - 1).contains("android"))) {
+          } else if(currentState.contains("android")) {
             getView().unSelectAllIcons();
             getView().setAndroidSelected();
-          } else if ((strings.get(strings.size() - 1).contains("web"))) {
+          } else if (currentState.contains("web")) {
             getView().unSelectAllIcons();
             getView().setWebSelected();
-          } else if ((strings.get(strings.size() - 1).contains("contact"))) {
+          } else if (currentState.contains("contact")) {
             getView().unSelectAllIcons();
             getView().setContactSelected();
           }

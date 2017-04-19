@@ -12,6 +12,8 @@ public class MainPresenter {
 
   private IStateService iStateService;
   private MainView view;
+  private String currentState;
+  private String lastState;
 
   @Inject
   public MainPresenter(IStateService iStateService) {
@@ -30,35 +32,36 @@ public class MainPresenter {
   private void listenForStateChanges() {
     iStateService.getStateList()
         .subscribe(strings -> {
-          if((strings.get(strings.size() - 1).contains("about"))) {
+          currentState = strings.get(strings.size() - 1);
+          if(currentState.contains("about")) {
             getView().moveToAbout();
-          } else if ((strings.get(strings.size() - 1).contains("android"))) {
+          } else if (currentState.contains("android")) {
             getView().moveToAndroid();
-          } else if ((strings.get(strings.size() - 1).contains("web"))) {
+          } else if (currentState.contains("web")) {
             getView().moveToWeb();
-          } else if ((strings.get(strings.size() - 1).contains("contact"))) {
+          } else if (currentState.contains("contact")) {
             getView().moveToContact();
-          } else if ((strings.get(strings.size() - 1).contains("education"))) {
+          } else if (currentState.contains("education")) {
             getView().attachEducation();
-          } else if ((strings.get(strings.size() - 1).contains("skills"))) {
+          } else if (currentState.contains("skills")) {
             getView().attachSkills();
-          } else if ((strings.get(strings.size() - 1).contains("experience"))) {
+          } else if (currentState.contains("experience")) {
             getView().attachExperience();
-          } else if ((strings.get(strings.size() - 1).contains("facts"))) {
+          } else if (currentState.contains("facts")) {
             getView().attachFacts();
-          } else if ((strings.get(strings.size() - 1).contains("restaurant"))) {
+          } else if (currentState.contains("restaurant")) {
             getView().attachRestaurant();
-          } else if ((strings.get(strings.size() - 1).contains("tekesports"))) {
+          } else if (currentState.contains("tekesports")) {
             getView().attachTekeSports();
-          } else if ((strings.get(strings.size() - 1).contains("scribblit"))) {
+          } else if (currentState.contains("scribblit")) {
             getView().attachScribblit();
-          } else if ((strings.get(strings.size() - 1).contains("powermap"))) {
+          } else if (currentState.contains("powermap")) {
             getView().attachPowerMap();
-          } else if ((strings.get(strings.size() - 1).contains("beatles"))) {
+          } else if (currentState.contains("beatles")) {
             getView().attachBeatles();
-          } else if ((strings.get(strings.size() - 1).contains("tictactoe"))) {
+          } else if (currentState.contains("tictactoe")) {
             getView().attachTicTacToe();
-          } else if ((strings.get(strings.size() - 1).contains("developer"))) {
+          } else if (currentState.contains("developer")) {
             getView().attachDeveloperProfile();
           }
         });
@@ -73,26 +76,33 @@ public class MainPresenter {
   }
 
   public void backPressed() {
-    iStateService.getStateList()
-        .first(new ArrayList<>())
-        .subscribe(strings -> {
-          if((strings.get(strings.size() - 1).contains("education"))
-              || (strings.get(strings.size() - 1).contains("skills"))
-            || (strings.get(strings.size() - 1).contains("experience"))
-            || (strings.get(strings.size() - 1).contains("facts"))
-          || (strings.get(strings.size() - 1).contains("restaurant"))
-              || (strings.get(strings.size() - 1).contains("tekesports"))
-              || (strings.get(strings.size() - 1).contains("scribblit"))
-              || (strings.get(strings.size() - 1).contains("powermap"))
-              || (strings.get(strings.size() - 1).contains("beatles"))
-              || (strings.get(strings.size() - 1).contains("tictactoe"))
-              || (strings.get(strings.size() - 1).contains("developer")))
-          {
-            iStateService.setState(strings.get(strings.size() - 2));
-            getView().detachFragment();
-          } else {
-            getView().superBack();
-          }
-        });
+      iStateService.getStateList()
+          .first(new ArrayList<>())
+          .subscribe(strings -> {
+            try {
+              lastState = strings.get(strings.size() - 2);
+              if((currentState.contains("education"))
+                  || (currentState.contains("skills"))
+                  || (currentState.contains("experience"))
+                  || (currentState.contains("facts"))
+                  || (currentState.contains("restaurant"))
+                  || (currentState.contains("tekesports"))
+                  || (currentState.contains("scribblit"))
+                  || (currentState.contains("powermap"))
+                  || (currentState.contains("beatles"))
+                  || (currentState.contains("tictactoe"))
+                  || (currentState.contains("developer")))
+              {
+                iStateService.setState(lastState);
+                getView().detachFragment();
+              }
+              else {
+                getView().superBack();
+              }
+            } catch (Exception e) {
+              getView().superBack();
+            }
+
+          });
   }
 }

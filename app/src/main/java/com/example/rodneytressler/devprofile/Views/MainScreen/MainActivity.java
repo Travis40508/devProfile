@@ -1,5 +1,6 @@
 package com.example.rodneytressler.devprofile.Views.MainScreen;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
@@ -168,7 +169,10 @@ public class MainActivity extends AppCompatActivity implements MainView{
   }
 
   @Override public void superBack() {
-    super.onBackPressed();
+    Intent intent = new Intent(Intent.ACTION_MAIN);
+    intent.addCategory(Intent.CATEGORY_HOME);
+    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    startActivity(intent);
   }
 
   @Override public void onBackPressed() {
