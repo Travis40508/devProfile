@@ -1,5 +1,7 @@
 package com.example.rodneytressler.devprofile.Views.TicTacToeScreen;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import com.example.rodneytressler.devprofile.Di.ApplicationClass;
 import com.example.rodneytressler.devprofile.R;
 import javax.inject.Inject;
@@ -17,6 +20,11 @@ import javax.inject.Inject;
 
 public class FragmentTicTacToe extends Fragment implements TicTacToeView {
   @Inject protected TicTacToePresenter presenter;
+
+  @OnClick(R.id.link_tictactoe_page)
+  public void ticTacToeLinkClicked() {
+    presenter.ticTacToeLinkClicked();
+  }
 
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -37,5 +45,11 @@ public class FragmentTicTacToe extends Fragment implements TicTacToeView {
      FragmentTicTacToe fragment = new FragmentTicTacToe();
     fragment.setArguments(args);
     return fragment;
+  }
+
+  @Override public void launchTicTacToeSite() {
+    Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+        Uri.parse("https://travis40508.github.io/travis-teky-week3-projects/ticTacToe/ticTacToe.html"));
+    startActivity(browserIntent);
   }
 }

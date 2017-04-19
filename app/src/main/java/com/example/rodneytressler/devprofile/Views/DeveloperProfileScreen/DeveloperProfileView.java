@@ -5,4 +5,5 @@ package com.example.rodneytressler.devprofile.Views.DeveloperProfileScreen;
  */
 
 public interface DeveloperProfileView {
+  void launchDeveloperProfilePage();
 }

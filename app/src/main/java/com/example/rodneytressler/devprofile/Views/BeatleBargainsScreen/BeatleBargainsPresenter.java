@@ -24,4 +24,8 @@ public class BeatleBargainsPresenter {
   public void setView(FragmentBeatleBargains fragmentBeatleBargains) {
     this.view = fragmentBeatleBargains;
   }
+
+  public void beatlesLinkClicked() {
+    getView().launchBeatlesPage();
+  }
 }

@@ -5,4 +5,5 @@ package com.example.rodneytressler.devprofile.Views.BeatleBargainsScreen;
  */
 
 public interface BeatleBargainsView {
+  void launchBeatlesPage();
 }

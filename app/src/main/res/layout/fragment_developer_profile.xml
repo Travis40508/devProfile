@@ -28,7 +28,7 @@
       android:text="&#8226; Used Bootstrap for Cohesive Interface\n\n&#8226; Used JavaScript for Dynamic Viewing\n\n&#8226; Web Version of this Application"/>
 
   <ImageView
-      android:id="@+id/link_beatles_page"
+      android:id="@+id/link_developer_profile_page"
       app:layout_widthPercent = "10%"
       app:layout_heightPercent = "10%"
       android:layout_alignParentEnd="true"

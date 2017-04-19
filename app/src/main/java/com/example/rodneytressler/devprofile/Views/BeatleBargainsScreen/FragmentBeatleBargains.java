@@ -1,12 +1,18 @@
 package com.example.rodneytressler.devprofile.Views.BeatleBargainsScreen;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import com.bumptech.glide.Glide;
 import com.example.rodneytressler.devprofile.Di.ApplicationClass;
 import com.example.rodneytressler.devprofile.R;
 import javax.inject.Inject;
@@ -17,6 +23,12 @@ import javax.inject.Inject;
 
 public class FragmentBeatleBargains extends Fragment implements BeatleBargainsView {
   @Inject protected BeatleBargainsPresenter presenter;
+  @BindView(R.id.link_beatles_page) ImageView beatlesLink;
+
+  @OnClick(R.id.link_beatles_page)
+  public void beatlesLinkClicked() {
+    presenter.beatlesLinkClicked();
+  }
 
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -37,5 +49,11 @@ public class FragmentBeatleBargains extends Fragment implements BeatleBargainsVi
      FragmentBeatleBargains fragment = new FragmentBeatleBargains();
     fragment.setArguments(args);
     return fragment;
+  }
+
+  @Override public void launchBeatlesPage() {
+    Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+        Uri.parse("https://travis40508.github.io/travis-teky-week3-projects/beatlePage/store_main.html"));
+    startActivity(browserIntent);
   }
 }

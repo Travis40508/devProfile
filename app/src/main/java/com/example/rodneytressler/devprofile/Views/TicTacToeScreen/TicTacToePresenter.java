@@ -24,4 +24,8 @@ public class TicTacToePresenter {
   public void setView(FragmentTicTacToe fragmentTicTacToe) {
     this.view = fragmentTicTacToe;
   }
+
+  public void ticTacToeLinkClicked() {
+    getView().launchTicTacToeSite();
+  }
 }

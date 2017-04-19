@@ -1,5 +1,7 @@
 package com.example.rodneytressler.devprofile.Views.DeveloperProfileScreen;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import com.example.rodneytressler.devprofile.Di.ApplicationClass;
 import com.example.rodneytressler.devprofile.R;
 import javax.inject.Inject;
@@ -17,6 +20,11 @@ import javax.inject.Inject;
 
 public class FragmentDeveloperProfile extends Fragment implements DeveloperProfileView {
   @Inject protected DeveloperProfilePresenter presenter;
+
+  @OnClick(R.id.link_developer_profile_page)
+  public void developerProfileClicked() {
+    presenter.developerProfileLinkClicked();
+  }
 
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -37,5 +45,11 @@ public class FragmentDeveloperProfile extends Fragment implements DeveloperProfi
      FragmentDeveloperProfile fragment = new FragmentDeveloperProfile();
     fragment.setArguments(args);
     return fragment;
+  }
+
+  @Override public void launchDeveloperProfilePage() {
+    Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+        Uri.parse("https://travis40508.github.io/developerProfileMain/"));
+    startActivity(browserIntent);
   }
 }

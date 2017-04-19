@@ -24,4 +24,8 @@ public class DeveloperProfilePresenter {
   public void setView(FragmentDeveloperProfile fragmentDeveloperProfile) {
     this.view = fragmentDeveloperProfile;
   }
+
+  public void developerProfileLinkClicked() {
+    getView().launchDeveloperProfilePage();
+  }
 }

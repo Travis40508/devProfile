@@ -5,4 +5,5 @@ package com.example.rodneytressler.devprofile.Views.TicTacToeScreen;
  */
 
 public interface TicTacToeView {
+  void launchTicTacToeSite();
 }
