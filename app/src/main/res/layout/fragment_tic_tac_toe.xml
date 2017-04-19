@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:clickable="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:clickable="true"
+    >
 
-  <TextView
-      android:textColor="#000000"
-      android:text="TicTacToe"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+  <ImageView
+      android:layout_alignParentTop="true"
+      android:id="@+id/image_tictactoe_fragment"
+      app:layout_heightPercent = "50%"
+      app:layout_widthPercent = "100%"
+      android:src="@drawable/tictactoe_page"
       />
 
-</RelativeLayout>
+  <TextView
+      android:id="@+id/text_tictactoe_fragment"
+      android:layout_below="@id/image_tictactoe_fragment"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:textColor="#000000"
+      android:fontFamily="sans-serif-smallcaps"
+      android:textStyle="bold"
+      android:textSize="25sp"
+      android:text="&#8226; Used Javascript for Logic\n\n&#8226; Imported jQuery Library for Functionality\n\n&#8226; Learned the difference between functional code and efficient code"/>
+
+  <ImageView
+      android:id="@+id/link_beatles_page"
+      app:layout_widthPercent = "10%"
+      app:layout_heightPercent = "10%"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:src="@drawable/ic_website_link"/>
+
+
+
+</android.support.percent.PercentRelativeLayout>
