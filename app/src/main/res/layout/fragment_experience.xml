@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#ffffff"
+    android:background="@color/mainBlack"
     android:clickable="true"
     >
 
@@ -22,7 +22,7 @@
       android:layout_below="@id/image_eleven_fifty"
       android:layout_width="wrap_content"
       app:layout_heightPercent = "30%"
-      android:textColor="#000000"
+      android:textColor="@color/mainWhite"
       android:textStyle="bold"
       android:text="&#8226; August 2016 - December 2016. \n \n
 &#8226; Completed Eleven Fifty Academy Bootcamp \n
@@ -46,7 +46,7 @@
       android:layout_width="wrap_content"
       app:layout_heightPercent = "30%"
       android:textStyle="bold"
-      android:textColor="#000000"
+      android:textColor="@color/mainWhite"
       android:text="&#8226; January 2017 - Present \n \n
 &#8226; Completed Four Month Internship. \n
 &#8226; Acquired Android Skillset. \n

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
+    android:background="@color/mainBlack"
     android:clickable="true"
     >
 
@@ -12,8 +12,9 @@
       android:fontFamily="sans-serif-smallcaps"
       android:textStyle="bold"
       android:textSize="30sp"
+      android:gravity="center_horizontal"
       android:layout_centerHorizontal="true"
-      android:textColor="#000000"
+      android:textColor="@color/mainWhite"
       android:layout_height="wrap_content"
       android:layout_width="wrap_content"
       android:layout_marginTop="30dp"

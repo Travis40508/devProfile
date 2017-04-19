@@ -9,4 +9,6 @@
   <color name="colorContact">#ff6600</color>
   <color name="mainBlue">#072666</color>
   <color name="mainWhite">#FFFFFE</color>
+  <color name="mainBlack">#151515</color>
+  <color name="headerBlack">#072666</color>
 </resources>

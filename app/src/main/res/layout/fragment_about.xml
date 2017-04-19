@@ -3,17 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
+    android:background="@color/mainBlack"
     >
 
   <TextView
+      android:layout_marginTop="30dp"
       android:id="@+id/title_about"
       android:textSize="50sp"
       android:text="ABOUT"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerHorizontal="true"
-      android:textColor="#000000"
+      android:textColor="@color/mainWhite"
       android:textStyle="bold"
       android:fontFamily="sans-serif-smallcaps"
       />
@@ -41,7 +42,7 @@
       app:layout_heightPercent="18%"
       android:text="Education"
       android:layout_below="@+id/image_education"
-      android:textColor="#000000"
+      android:textColor="@color/mainWhite"
 
 
       />
@@ -70,7 +71,7 @@
         app:layout_heightPercent="18%"
         android:text="Skills"
         android:layout_below="@+id/image_skills"
-        android:textColor="#000000"
+        android:textColor="@color/mainWhite"
 
 
         />
@@ -99,7 +100,7 @@
         app:layout_heightPercent="18%"
         android:text="Experience"
         android:layout_below="@+id/image_experience"
-        android:textColor="#000000"
+        android:textColor="@color/mainWhite"
 
 
         />
@@ -128,7 +129,7 @@
         app:layout_heightPercent="18%"
         android:text="Facts"
         android:layout_below="@+id/image_facts"
-        android:textColor="#000000"
+        android:textColor="@color/mainWhite"
 
 
         />

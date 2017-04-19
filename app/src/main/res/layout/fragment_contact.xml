@@ -3,17 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
+    android:background="@color/mainBlack"
     >
 
   <TextView
+      android:layout_marginTop="30dp"
       android:id="@+id/title_contact"
       android:textSize="50sp"
       android:text="CONTACT"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerHorizontal="true"
-      android:textColor="#000000"
+      android:textColor="@color/colorContact"
       android:textStyle="bold"
       android:fontFamily="sans-serif-smallcaps"
       />
@@ -41,7 +42,7 @@
         app:layout_heightPercent="18%"
         android:text="Call Now"
         android:layout_below="@+id/image_phone"
-        android:textColor="#000000"
+        android:textColor="@color/colorContact"
 
 
         />
@@ -72,7 +73,7 @@
         app:layout_heightPercent="18%"
         android:text="Email"
         android:layout_below="@+id/image_email"
-        android:textColor="#000000"
+        android:textColor="@color/colorContact"
 
 
         />
@@ -101,7 +102,7 @@
         app:layout_heightPercent="18%"
         android:text="LinkedIn"
         android:layout_below="@+id/image_linkedin"
-        android:textColor="#000000"
+        android:textColor="@color/colorContact"
 
 
         />

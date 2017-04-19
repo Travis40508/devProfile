@@ -3,17 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
+    android:background="@color/mainBlack"
     >
 
   <TextView
+      android:layout_marginTop="30dp"
       android:id="@+id/title_web"
       android:textSize="50sp"
       android:text="WEB"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerHorizontal="true"
-      android:textColor="#000000"
+      android:textColor="@color/colorWeb"
       android:textStyle="bold"
       android:fontFamily="sans-serif-smallcaps"
       />
@@ -41,7 +42,7 @@
         app:layout_heightPercent="18%"
         android:text="Beatle Bargains"
         android:layout_below="@+id/image_beatles"
-        android:textColor="#000000"
+        android:textColor="@color/colorWeb"
 
 
         />
@@ -72,7 +73,7 @@
         app:layout_heightPercent="18%"
         android:text="Tic-Tac-Toe"
         android:layout_below="@+id/image_tictactoe"
-        android:textColor="#000000"
+        android:textColor="@color/colorWeb"
 
 
         />
@@ -101,7 +102,7 @@
         app:layout_heightPercent="18%"
         android:text="Developer Profile"
         android:layout_below="@+id/image_dev_profile"
-        android:textColor="#000000"
+        android:textColor="@color/colorWeb"
 
 
         />
