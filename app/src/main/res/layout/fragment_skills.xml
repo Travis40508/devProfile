@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/mainBlack"
+    android:background="@color/mainWhite"
     android:clickable="true"
     >
 
@@ -18,7 +18,7 @@
       android:layout_width="wrap_content"
       app:layout_heightPercent = "25%"
       android:textStyle="bold"
-      android:textColor="@color/mainWhite"
+      android:textColor="@color/mainBlack"
       android:textSize="20sp"
       android:layout_below="@id/image_trifecta"
       android:fontFamily="sans-serif-smallcaps"
@@ -40,7 +40,7 @@
       app:layout_heightPercent = "25%"
       android:textStyle="bold"
       android:textSize="20sp"
-      android:textColor="@color/mainWhite"
+      android:textColor="@color/mainBlack"
       android:layout_below="@id/image_bifecta"
       android:fontFamily="sans-serif-smallcaps"
       android:gravity="center_horizontal"
