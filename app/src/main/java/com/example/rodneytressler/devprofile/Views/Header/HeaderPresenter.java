@@ -1,21 +1,19 @@
 package com.example.rodneytressler.devprofile.Views.Header;
 
 import com.example.rodneytressler.devprofile.StateService.IStateService;
+import com.example.rodneytressler.devprofile.Tools.BasePresenter;
 import javax.inject.Inject;
 
 /**
  * Created by rodneytressler on 4/16/17.
  */
 
-public class HeaderPresenter {
-  private IStateService iStateService;
-
-  private HeaderView view;
+public class HeaderPresenter extends BasePresenter<HeaderView>{
   private String currentState;
 
   @Inject
   public HeaderPresenter(IStateService iStateService) {
-    this.iStateService = iStateService;
+    super(iStateService);
   }
 
   public void setView(Header header) {
@@ -45,9 +43,6 @@ public class HeaderPresenter {
         });
   }
 
-  public HeaderView getView() {
-    return view;
-  }
 
   public void buttonClicked(String button) {
     iStateService.setState(button);

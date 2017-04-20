@@ -176,7 +176,6 @@ public class MainActivity extends AppCompatActivity implements MainView{
   }
 
   @Override public void onBackPressed() {
-    //super.onBackPressed();
     mainPresenter.backPressed();
   }
 }

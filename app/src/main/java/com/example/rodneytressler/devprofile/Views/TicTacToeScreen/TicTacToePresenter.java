@@ -1,25 +1,20 @@
 package com.example.rodneytressler.devprofile.Views.TicTacToeScreen;
 
 import com.example.rodneytressler.devprofile.StateService.IStateService;
+import com.example.rodneytressler.devprofile.Tools.BasePresenter;
 import javax.inject.Inject;
 
 /**
  * Created by rodneytressler on 4/17/17.
  */
 
-public class TicTacToePresenter {
-  private IStateService iStateService;
-
-  private TicTacToeView view;
+public class TicTacToePresenter extends BasePresenter<TicTacToeView>{
 
   @Inject
   public TicTacToePresenter(IStateService iStateService) {
-    this.iStateService = iStateService;
+    super(iStateService);
   }
 
-  public TicTacToeView getView() {
-    return view;
-  }
 
   public void setView(FragmentTicTacToe fragmentTicTacToe) {
     this.view = fragmentTicTacToe;

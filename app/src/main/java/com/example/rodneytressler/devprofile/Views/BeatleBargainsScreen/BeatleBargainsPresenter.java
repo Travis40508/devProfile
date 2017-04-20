@@ -1,25 +1,21 @@
 package com.example.rodneytressler.devprofile.Views.BeatleBargainsScreen;
 
 import com.example.rodneytressler.devprofile.StateService.IStateService;
+import com.example.rodneytressler.devprofile.Tools.BasePresenter;
 import javax.inject.Inject;
 
 /**
  * Created by rodneytressler on 4/17/17.
  */
 
-public class BeatleBargainsPresenter {
-  private IStateService iStateService;
+public class BeatleBargainsPresenter extends BasePresenter<BeatleBargainsView>{
 
-  private BeatleBargainsView view;
 
   @Inject
   public BeatleBargainsPresenter(IStateService iStateService) {
-    this.iStateService = iStateService;
+    super(iStateService);
   }
 
-  public BeatleBargainsView getView() {
-    return view;
-  }
 
   public void setView(FragmentBeatleBargains fragmentBeatleBargains) {
     this.view = fragmentBeatleBargains;

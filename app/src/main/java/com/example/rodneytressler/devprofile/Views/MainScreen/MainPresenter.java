@@ -1,6 +1,7 @@
 package com.example.rodneytressler.devprofile.Views.MainScreen;
 
 import com.example.rodneytressler.devprofile.StateService.IStateService;
+import com.example.rodneytressler.devprofile.Tools.BasePresenter;
 import java.util.ArrayList;
 import javax.inject.Inject;
 
@@ -8,16 +9,14 @@ import javax.inject.Inject;
  * Created by rodneytressler on 4/16/17.
  */
 
-public class MainPresenter {
+public class MainPresenter extends BasePresenter<MainView>{
 
-  private IStateService iStateService;
-  private MainView view;
   private String currentState;
   private String lastState;
 
   @Inject
   public MainPresenter(IStateService iStateService) {
-    this.iStateService = iStateService;
+    super(iStateService);
   }
 
   public void setView(MainActivity mainActivity) {
@@ -67,9 +66,6 @@ public class MainPresenter {
         });
   }
 
-  public MainView getView() {
-    return view;
-  }
 
   public void setState(String state) {
     iStateService.setState(state);
