@@ -5,17 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.profile.rodneytressler.devprofile.Views.MainScreen.MainActivity"
+    tools:context="com.dev.rodneytressler.devprofile.Views.MainScreen.MainActivity"
     >
 
- <com.profile.rodneytressler.devprofile.Views.Header.Header
+ <com.dev.rodneytressler.devprofile.Views.Header.Header
      android:layout_alignParentTop="true"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:id="@+id/header"
      >
 
- </com.profile.rodneytressler.devprofile.Views.Header.Header>
+ </com.dev.rodneytressler.devprofile.Views.Header.Header>
 
  <android.support.v4.view.ViewPager
      android:layout_below="@id/header"
