@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rodneytressler.devprofile">
+    package="com.profile.rodneytressler.devprofile">
 
   <application
-      android:name=".Di.ApplicationClass"
+      android:name="com.profile.rodneytressler.devprofile.Di.ApplicationClass"
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
       android:roundIcon="@mipmap/ic_launcher"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name=".Views.SplashScreen.SplashScreen"
+    <activity android:name="com.profile.rodneytressler.devprofile.Views.SplashScreen.SplashScreen"
         android:screenOrientation="portrait">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -18,7 +18,7 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <activity android:name=".Views.MainScreen.MainActivity"
+    <activity android:name="com.profile.rodneytressler.devprofile.Views.MainScreen.MainActivity"
       android:screenOrientation="portrait">
 
     </activity>
