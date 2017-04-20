@@ -5,11 +5,16 @@
   <color name="colorAccent">#FF4081</color>
   <color name="colorGrey">#333333</color>
   <color name="colorAndroid">#A4C639</color>
+  <color name="darkAndroid">#254700</color>
   <color name="colorWeb">#1EBBEE</color>
+  <color name="darkWeb">#003C6F</color>
   <color name="colorContact">#ff6600</color>
-  <color name="themeOne">#072666</color>
-  <color name="themeTwo">#FFFFFE</color>
-  <color name="themeThree">#151515</color>
+  <color name="darkContact">#800000</color>
+  <color name="boxColorsAndHeader">#0A1612</color>
+  <color name="backGrounds">#1A2930</color>
+  <color name="fontColor">#0A1612</color>
   <color name="themeFour">#000000</color>
   <color name="headerBlack">#072666</color>
+  <color name="aboutSelected">#FFFFFE</color>
+  <color name="aboutDark">#80807F</color>
 </resources>

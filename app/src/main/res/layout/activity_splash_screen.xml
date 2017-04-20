@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/themeTwo"
+    android:background="@color/backGrounds"
     >
 
   <TextView
@@ -11,7 +11,7 @@
       android:textSize="40sp"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:textColor="@color/themeThree"
+      android:textColor="@color/aboutSelected"
       android:gravity="center_horizontal"
       android:text="Rodney 'Travis' Tressler"
       android:layout_marginTop="30dp"
@@ -19,6 +19,7 @@
       android:layout_alignParentTop="true"/>
 
   <ImageView
+
       app:layout_widthPercent = "100%"
       app:layout_heightPercent = "50%"
       android:layout_centerVertical="true"
@@ -29,7 +30,7 @@
       android:textSize="40sp"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:textColor="@color/themeThree"
+      android:textColor="@color/aboutSelected"
       android:gravity="center"
       android:text="Professional Developer Profile"
       android:textStyle="bold"
