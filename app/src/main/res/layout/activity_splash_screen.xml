@@ -32,7 +32,8 @@
       android:layout_height="wrap_content"
       android:textColor="@color/aboutSelected"
       android:gravity="center"
-      android:text="Mobile/Web Developer"
+      android:text="Mobile/Web Junior Developer"
+      android:minLines="2"
       android:textStyle="bold"
       android:layout_alignParentBottom="true"
       android:layout_marginBottom="20dp"/>
