@@ -7,8 +7,9 @@
   <color name="colorAndroid">#A4C639</color>
   <color name="colorWeb">#1EBBEE</color>
   <color name="colorContact">#ff6600</color>
-  <color name="mainBlue">#072666</color>
-  <color name="mainWhite">#FFFFFE</color>
-  <color name="mainBlack">#151515</color>
+  <color name="themeOne">#072666</color>
+  <color name="themeTwo">#FFFFFE</color>
+  <color name="themeThree">#151515</color>
+  <color name="themeFour">#000000</color>
   <color name="headerBlack">#072666</color>
 </resources>
