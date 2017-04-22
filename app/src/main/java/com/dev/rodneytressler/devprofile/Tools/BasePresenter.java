@@ -9,6 +9,8 @@ import com.dev.rodneytressler.devprofile.StateService.IStateService;
 
 public abstract class BasePresenter<T> {
   protected IStateService iStateService;
+  protected String currentState;
+  protected String lastState;
 
   @Nullable protected T view;
 
@@ -16,11 +18,24 @@ public abstract class BasePresenter<T> {
     this.iStateService = iStateService;
   }
 
+
+
   @Nullable protected T getView() {
     return view;
   }
 
   public void setView(T view) {
     this.view = view;
+
+  }
+
+  protected void loadStateList() {
+    iStateService.getStateList()
+        .subscribe(strings -> {
+          currentState = strings.get(strings.size() - 1);
+          try {
+            lastState = strings.get(strings.size() - 2);
+          } catch (Exception e) {}
+        });
   }
 }

@@ -9,7 +9,6 @@ import javax.inject.Inject;
  */
 
 public class HeaderPresenter extends BasePresenter<HeaderView>{
-  private String currentState;
 
   @Inject
   public HeaderPresenter(IStateService iStateService) {
@@ -19,14 +18,14 @@ public class HeaderPresenter extends BasePresenter<HeaderView>{
   public void setView(Header header) {
     this.view = header;
     if(view != null) {
+      loadStateList();
       listenForStateChanges();
     }
   }
 
   private void listenForStateChanges() {
     iStateService.getStateList()
-        .subscribe(strings -> {
-          currentState = strings.get(strings.size() - 1);
+        .subscribe(states -> {
           if(currentState.contains("about")) {
             getView().unSelectAllIcons();
             getView().setAboutSelected();
@@ -41,6 +40,7 @@ public class HeaderPresenter extends BasePresenter<HeaderView>{
             getView().setContactSelected();
           }
         });
+
   }
 
 

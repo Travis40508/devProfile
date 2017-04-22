@@ -11,8 +11,6 @@ import javax.inject.Inject;
 
 public class MainPresenter extends BasePresenter<MainView>{
 
-  private String currentState;
-  private String lastState;
 
   @Inject
   public MainPresenter(IStateService iStateService) {
@@ -22,6 +20,7 @@ public class MainPresenter extends BasePresenter<MainView>{
   public void setView(MainActivity mainActivity) {
     this.view = mainActivity;
     if(view != null) {
+      loadStateList();
       getView().loadPagerAdapter();
       getView().listenForPageChanges();
       listenForStateChanges();
@@ -30,8 +29,7 @@ public class MainPresenter extends BasePresenter<MainView>{
 
   private void listenForStateChanges() {
     iStateService.getStateList()
-        .subscribe(strings -> {
-          currentState = strings.get(strings.size() - 1);
+        .subscribe(states -> {
           if(currentState.contains("about")) {
             getView().moveToAbout();
           } else if (currentState.contains("android")) {
@@ -64,6 +62,7 @@ public class MainPresenter extends BasePresenter<MainView>{
             getView().attachDeveloperProfile();
           }
         });
+
   }
 
 
@@ -72,11 +71,6 @@ public class MainPresenter extends BasePresenter<MainView>{
   }
 
   public void backPressed() {
-      iStateService.getStateList()
-          .first(new ArrayList<>())
-          .subscribe(strings -> {
-            try {
-              lastState = strings.get(strings.size() - 2);
               if((currentState.contains("education"))
                   || (currentState.contains("skills"))
                   || (currentState.contains("experience"))
@@ -95,10 +89,5 @@ public class MainPresenter extends BasePresenter<MainView>{
               else {
                 getView().superBack();
               }
-            } catch (Exception e) {
-              getView().superBack();
             }
-
-          });
-  }
 }
