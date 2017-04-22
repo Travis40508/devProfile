@@ -41,6 +41,9 @@ public class FragmentAndroid extends Fragment implements  AndroidView{
     return fragment;
   }
 
+  /** Tells the presenter which app state to set the app to, with the Main Presenter and
+   * Header Presenter listening and behaving accordingly.*/
+
   @OnClick({R.id.image_restaurant, R.id.image_tekesports, R.id.image_scribblit, R.id.image_powermap})
   public void onClick(View view) {
     switch(view.getId()) {

@@ -47,6 +47,8 @@ public class FragmentTicTacToe extends Fragment implements TicTacToeView {
     return fragment;
   }
 
+  /** Launches tictactoe website based on button click. */
+
   @Override public void launchTicTacToeSite() {
     Intent browserIntent = new Intent(Intent.ACTION_VIEW,
         Uri.parse("https://travis40508.github.io/travis-teky-week3-projects/ticTacToe/ticTacToe.html"));

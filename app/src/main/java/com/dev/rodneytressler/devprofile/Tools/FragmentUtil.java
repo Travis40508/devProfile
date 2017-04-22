@@ -14,6 +14,9 @@ public class FragmentUtil {
   public static FragmentManager fragmentManager;
   public static FragmentTransaction fragmentTransaction;
 
+  /** onCreate MainActivity gives supportFragmentManager() to FragmentUtil.
+   * Makes for easing attaching and detaching of fragments throughout the application */
+
   @Singleton
   public FragmentUtil(FragmentManager fragmentManager) {
     this.fragmentManager = fragmentManager;
@@ -32,9 +35,5 @@ public class FragmentUtil {
         .setCustomAnimations(enterAnim, exitAnim)
         .remove(fragmentManager.findFragmentById(id))
         .commit();
-  }
-
-  public static void replaceFragment() {
-
   }
 }

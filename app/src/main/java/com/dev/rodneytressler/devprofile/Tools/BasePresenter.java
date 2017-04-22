@@ -14,6 +14,8 @@ public abstract class BasePresenter<T> {
 
   @Nullable protected T view;
 
+  /** Used as a parent presenter for other presenters. Assigns values for current and last app states.*/
+
   protected BasePresenter(IStateService iStateService) {
     this.iStateService = iStateService;
   }

@@ -43,6 +43,8 @@ public class FragmentContact extends Fragment implements ContactView{
     return fragment;
   }
 
+  /** Tells the presenter which button was pressed so it can launch corresponding method here. */
+
   @OnClick({R.id.image_phone, R.id.image_email, R.id.image_linkedin})
   public void onClick(View view) {
     switch(view.getId()) {
@@ -58,11 +60,15 @@ public class FragmentContact extends Fragment implements ContactView{
     }
   }
 
+  /** Allows user to call my phone on their device. */
+
   @Override public void callNumber() {
     Intent intent = new Intent(Intent.ACTION_DIAL);
     intent.setData(Uri.parse("tel:6065482251"));
     startActivity(intent);
   }
+
+  /** Allows user to send me an email on their device. */
 
   @Override public void sendEmail() {
     Intent intent = new Intent(Intent.ACTION_SEND);
@@ -71,6 +77,8 @@ public class FragmentContact extends Fragment implements ContactView{
     intent.putExtra(Intent.EXTRA_SUBJECT, "About Your App...");
     startActivity(Intent.createChooser(intent, ""));
   }
+
+  /** Allows user to view my linkedin profile on their device. */
 
   @Override public void openLinkedIn() {
     Intent browserIntent = new Intent(Intent.ACTION_VIEW,

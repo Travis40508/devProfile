@@ -40,6 +40,10 @@ public class FragmentWeb extends Fragment implements  WebView{
     return fragment;
   }
 
+  /** Sets state of app based on button click so that header presenter and main presenter,
+   * which are listening to the state of the app can manipulate their corresponding views
+   * accordingly. */
+
   @OnClick({R.id.image_beatles, R.id.image_tictactoe, R.id.image_dev_profile})
   public void onClick(View view) {
     switch(view.getId()) {

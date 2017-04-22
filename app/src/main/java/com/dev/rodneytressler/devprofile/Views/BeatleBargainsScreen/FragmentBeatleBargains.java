@@ -50,6 +50,8 @@ public class FragmentBeatleBargains extends Fragment implements BeatleBargainsVi
     return fragment;
   }
 
+  /** Opens up Beatles WebPage on Device */
+
   @Override public void launchBeatlesPage() {
     Intent browserIntent = new Intent(Intent.ACTION_VIEW,
         Uri.parse("https://travis40508.github.io/travis-teky-week3-projects/beatlePage/store_main.html"));

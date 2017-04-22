@@ -27,6 +27,7 @@ public class MainPresenter extends BasePresenter<MainView>{
     }
   }
 
+  /** Listens for states changing in the app and tells the view which fragment to move to accordingly. */
   private void listenForStateChanges() {
     iStateService.getStateList()
         .subscribe(states -> {
@@ -65,10 +66,13 @@ public class MainPresenter extends BasePresenter<MainView>{
 
   }
 
+  /** Sets state of app based on button press or swipe. */
 
   public void setState(String state) {
     iStateService.setState(state);
   }
+
+  /** tells view to detach sectional fragment or close app based on current state of app. */
 
   public void backPressed() {
               if((currentState.contains("education"))

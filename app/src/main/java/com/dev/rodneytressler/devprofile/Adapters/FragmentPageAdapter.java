@@ -21,6 +21,8 @@ private List<Fragment> fragments;
     this.fragments = fragmentList;
   }
 
+  /** Assigns specific fragments to specific pages in the ViewPager */
+
   @Override public Fragment getItem(int position) {
     switch (position) {
       case 0 :
@@ -40,6 +42,7 @@ private List<Fragment> fragments;
 
   }
 
+  /** Returns proper number of pages */
   @Override public int getCount() {
     return 4;
   }

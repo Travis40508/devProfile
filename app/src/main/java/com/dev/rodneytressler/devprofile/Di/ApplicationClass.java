@@ -9,6 +9,8 @@ import com.dev.rodneytressler.devprofile.StateService.StateServiceModule;
 
 public class ApplicationClass extends Application {
 
+  /** Application Class for building DI component */
+
   private ApplicationComponent applicationComponent;
   private StateServiceModule stateServiceModule;
   private ApplicationModule applicationModule;

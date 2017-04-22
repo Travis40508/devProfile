@@ -47,6 +47,9 @@ public class FragmentAbout extends Fragment implements AboutView{
     return fragment;
   }
 
+  /** Tells the presenter which app state to set the app to, with the Main Presenter and
+   * Header Presenter listening and behaving accordingly.*/
+
   @OnClick({R.id.image_education, R.id.image_skills, R.id.image_experience, R.id.image_facts})
   public void onClick(View view) {
     switch(view.getId()) {

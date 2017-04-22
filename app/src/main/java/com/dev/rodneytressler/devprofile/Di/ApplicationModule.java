@@ -19,6 +19,8 @@ public class ApplicationModule {
     this.application = application;
   }
 
+
+  /** Allows injection of Application Context with DI */
   @Provides
   @Singleton
   public Context provideContext() {

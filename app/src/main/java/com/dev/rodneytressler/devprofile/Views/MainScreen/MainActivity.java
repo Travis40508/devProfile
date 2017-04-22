@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements MainView{
 
   }
 
+  /**  Sets up arraylist of pages to be used in the viewpager. */
   @Override public void loadPagerAdapter() {
     fragmentList.add(FragmentAbout.newInstance());
     fragmentList.add(FragmentAndroid.newInstance());
@@ -60,6 +61,9 @@ public class MainActivity extends AppCompatActivity implements MainView{
     fragmentPagerAdapter = new FragmentPageAdapter(getSupportFragmentManager(), fragmentList);
     viewPager.setAdapter(fragmentPagerAdapter);
   }
+
+  /**  Listens for page changes in the viewpager and changes the state of the app so that the
+   * header presenter can behave accordingly.*/
 
   @Override public void listenForPageChanges() {
     viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -90,80 +94,125 @@ public class MainActivity extends AppCompatActivity implements MainView{
     });
   }
 
+  /**  Moves to the About page whenever the state of the app is changed to about. */
+
   @Override public void moveToAbout() {
     viewPager.setCurrentItem(0);
   }
+
+  /**  Moves to the Android page whenever the state of the app is changed to android. */
 
   @Override public void moveToAndroid() {
     viewPager.setCurrentItem(1);
   }
 
+  /**  Moves to the Web page whenever the state of the app is changed to web. */
+
   @Override public void moveToWeb() {
     viewPager.setCurrentItem(2);
   }
 
+  /**  Moves to the Contact page whenever the state of the app is changed to contact. */
+
   @Override public void moveToContact() {
     viewPager.setCurrentItem(3);
   }
+
+  /**  Attaches education fragment, using fragmentUtil
+   * whenever the state of the app is changed to education. */
 
   @Override public void attachEducation() {
     fragmentUtil.attachFragment(FragmentEducation.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
         R.anim.slide_out_left);
   }
 
+  /**  Attaches skills fragment, using fragmentUtil
+   * whenever the state of the app is changed to skills. */
+
   @Override public void attachSkills() {
     fragmentUtil.attachFragment(FragmentSkills.newInstance(), R.id.frame_layout, R.anim.slide_in_right,
         R.anim.slide_out_left);
   }
+
+  /**  Attaches experience fragment, using fragmentUtil
+   * whenever the state of the app is changed to experience. */
 
   @Override public void attachExperience() {
     fragmentUtil.attachFragment(FragmentExperience.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
+  /**  Attaches facts fragment, using fragmentUtil
+   * whenever the state of the app is changed to facts. */
+
   @Override public void attachFacts() {
     fragmentUtil.attachFragment(FragmentFacts.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
+  /** Detaches section fragments on back press */
+
   @Override public void detachFragment() {
     fragmentUtil.detachFragment(R.id.frame_layout, R.anim.slide_in_left, R.anim.slide_out_right);
   }
+
+  /**  Attaches restaurant fragment, using fragmentUtil
+   * whenever the state of the app is changed to restaurant. */
 
   @Override public void attachRestaurant() {
     fragmentUtil.attachFragment(FragmentRestaurant.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
+  /**  Attaches tekesports fragment, using fragmentUtil
+   * whenever the state of the app is changed to tekesports. */
+
   @Override public void attachTekeSports() {
     fragmentUtil.attachFragment(FragmentTekesports.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
+
+  /**  Attaches scribblit fragment, using fragmentUtil
+   * whenever the state of the app is changed to scribblit. */
 
   @Override public void attachScribblit() {
     fragmentUtil.attachFragment(FragmentScribblit.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
+  /**  Attaches powermap fragment, using fragmentUtil
+   * whenever the state of the app is changed to powermap. */
+
   @Override public void attachPowerMap() {
     fragmentUtil.attachFragment(FragmentPowermap.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
+
+  /**  Attaches beatles fragment, using fragmentUtil
+   * whenever the state of the app is changed to beatles. */
 
   @Override public void attachBeatles() {
     fragmentUtil.attachFragment(FragmentBeatleBargains.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
+  /**  Attaches tictactoe fragment, using fragmentUtil
+   * whenever the state of the app is changed to tictactoe. */
+
   @Override public void attachTicTacToe() {
     fragmentUtil.attachFragment(FragmentTicTacToe.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
 
+  /**  Attaches developer profile fragment, using fragmentUtil
+   * whenever the state of the app is changed to developer profile. */
+
   @Override public void attachDeveloperProfile() {
     fragmentUtil.attachFragment(FragmentDeveloperProfile.newInstance(), R.id.frame_layout,
         R.anim.slide_in_right, R.anim.slide_out_left);
   }
+
+  /**  Takes user out of app when back is pressed on one of four viewpager fragment screens. */
 
   @Override public void superBack() {
     Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -171,6 +220,8 @@ public class MainActivity extends AppCompatActivity implements MainView{
     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     startActivity(intent);
   }
+
+  /**  Detaches section fragments on back press. */
 
   @Override public void onBackPressed() {
     mainPresenter.backPressed();

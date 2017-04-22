@@ -25,6 +25,8 @@ import javax.inject.Singleton;
  * Created by rodneytressler on 4/16/17.
  */
 
+/** Assigns modules and specifies classes being injected */
+
 @Component(modules = {ApplicationModule.class, StateServiceModule.class})
 @Singleton
 public interface ApplicationComponent {

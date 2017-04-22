@@ -13,6 +13,10 @@ import com.dev.rodneytressler.devprofile.Views.MainScreen.MainActivity;
  */
 
 public class SplashScreen extends AppCompatActivity {
+
+  /** Sets splash screen for four seconds to give potential employers
+   * time to read the screen fully*/
+
   private final int SPLASH_DISPLAY_LENGTH = 4000;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {

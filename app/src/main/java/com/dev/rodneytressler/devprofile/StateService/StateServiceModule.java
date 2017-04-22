@@ -11,6 +11,7 @@ import javax.inject.Singleton;
 @Module
 public class StateServiceModule {
 
+  /** Creates single instance of StateServiceImpl class to be provided to other classes */
   @Provides
   @Singleton
   IStateService providesStateService() {

@@ -47,6 +47,8 @@ public class FragmentDeveloperProfile extends Fragment implements DeveloperProfi
     return fragment;
   }
 
+  /** Opens my developerprofile website on user's device. */
+
   @Override public void launchDeveloperProfilePage() {
     Intent browserIntent = new Intent(Intent.ACTION_VIEW,
         Uri.parse("https://travis40508.github.io/developerProfileMain/"));

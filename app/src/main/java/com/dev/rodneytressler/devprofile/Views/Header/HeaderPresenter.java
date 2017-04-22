@@ -23,6 +23,9 @@ public class HeaderPresenter extends BasePresenter<HeaderView>{
     }
   }
 
+  /** Listens for state changes in the application and changes the header accordingly.
+   * Knows what current state is due to parent abstract class it's inheriting. */
+
   private void listenForStateChanges() {
     iStateService.getStateList()
         .subscribe(states -> {

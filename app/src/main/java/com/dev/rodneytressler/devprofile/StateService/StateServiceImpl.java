@@ -11,6 +11,7 @@ import java.util.List;
 public class StateServiceImpl implements IStateService {
 
 
+  /** Sets up an observable stateList so that presenters can detect when the app state changes. */
 
   public BehaviorSubject<List<String>> stateList;
 
@@ -19,6 +20,7 @@ public class StateServiceImpl implements IStateService {
     init();
   }
 
+  /** Makes Statelist have an initial state, the About fragment. */
   public void init() {
     ArrayList<String> newState = new ArrayList<>();
     newState.add("about");
@@ -26,6 +28,8 @@ public class StateServiceImpl implements IStateService {
     stateList.onNext(newState);
   }
 
+  /** Overrides initial state guidelines for stateList and makes it return all states after
+   * Inital state has been set.*/
   @Override public void setState(String state) {
     List<String> states = stateList.getValue();
 
@@ -34,6 +38,7 @@ public class StateServiceImpl implements IStateService {
     stateList.onNext(states);
   }
 
+  /** Returns list of states to subscribers in presenter classes. */
   @Override public BehaviorSubject<List<String>> getStateList() {
     return stateList;
   }
