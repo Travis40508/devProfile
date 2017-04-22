@@ -8,6 +8,8 @@ import java.util.List;
  */
 
 public interface IStateService {
+
   void setState(String state);
+
   BehaviorSubject<List<String>> getStateList();
 }
