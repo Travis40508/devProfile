@@ -11,8 +11,8 @@ import javax.inject.Singleton;
 
 public class FragmentUtil {
 
-  public static FragmentManager fragmentManager;
-  public static FragmentTransaction fragmentTransaction;
+  public FragmentManager fragmentManager;
+  public FragmentTransaction fragmentTransaction;
 
   /** onCreate MainActivity gives supportFragmentManager() to FragmentUtil.
    * Makes for easing attaching and detaching of fragments throughout the application */
@@ -22,7 +22,7 @@ public class FragmentUtil {
     this.fragmentManager = fragmentManager;
   }
 
-  public static void attachFragment(Fragment fragment, int id, int enterAnim, int exitAnim) {
+  public void attachFragment(Fragment fragment, int id, int enterAnim, int exitAnim) {
     fragmentTransaction = fragmentManager.beginTransaction();
     fragmentTransaction.setCustomAnimations(enterAnim, exitAnim);
     fragmentTransaction.replace(id, fragment);
@@ -30,7 +30,7 @@ public class FragmentUtil {
     fragmentTransaction.commit();
   }
 
-  public static void detachFragment(int id, int enterAnim, int exitAnim) {
+  public void detachFragment(int id, int enterAnim, int exitAnim) {
     fragmentManager.beginTransaction()
         .setCustomAnimations(enterAnim, exitAnim)
         .remove(fragmentManager.findFragmentById(id))

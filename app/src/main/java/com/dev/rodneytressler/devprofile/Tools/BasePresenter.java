@@ -2,6 +2,7 @@ package com.dev.rodneytressler.devprofile.Tools;
 
 import android.support.annotation.Nullable;
 import com.dev.rodneytressler.devprofile.StateService.IStateService;
+import java.util.List;
 
 /**
  * Created by rodneytressler on 4/19/17.
@@ -11,6 +12,7 @@ public abstract class BasePresenter<T> {
   protected IStateService iStateService;
   protected String currentState;
   protected String lastState;
+  protected List stateList;
 
   @Nullable protected T view;
 
@@ -31,13 +33,15 @@ public abstract class BasePresenter<T> {
 
   }
 
-  protected void loadStateList() {
+  public void loadStateList() {
     iStateService.getStateList()
         .subscribe(strings -> {
+          stateList = strings;
           currentState = strings.get(strings.size() - 1);
           try {
             lastState = strings.get(strings.size() - 2);
           } catch (Exception e) {}
         });
   }
+
 }
