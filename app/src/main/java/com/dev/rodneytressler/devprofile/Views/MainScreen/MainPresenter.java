@@ -31,35 +31,35 @@ public class MainPresenter extends BasePresenter<MainView>{
   private void listenForStateChanges() {
     iStateService.getStateList()
         .subscribe(states -> {
-          if(currentState.contains("about")) {
+          if(currentState.equals("about")) {
             getView().moveToAbout();
-          } else if (currentState.contains("android")) {
+          } else if (currentState.equals("android")) {
             getView().moveToAndroid();
-          } else if (currentState.contains("web")) {
+          } else if (currentState.equals("web")) {
             getView().moveToWeb();
-          } else if (currentState.contains("contact")) {
+          } else if (currentState.equals("contact")) {
             getView().moveToContact();
-          } else if (currentState.contains("education")) {
+          } else if (currentState.equals("education")) {
             getView().attachEducation();
-          } else if (currentState.contains("skills")) {
+          } else if (currentState.equals("skills")) {
             getView().attachSkills();
-          } else if (currentState.contains("experience")) {
+          } else if (currentState.equals("experience")) {
             getView().attachExperience();
-          } else if (currentState.contains("facts")) {
+          } else if (currentState.equals("facts")) {
             getView().attachFacts();
-          } else if (currentState.contains("restaurant")) {
+          } else if (currentState.equals("restaurant")) {
             getView().attachRestaurant();
-          } else if (currentState.contains("tekesports")) {
+          } else if (currentState.equals("tekesports")) {
             getView().attachTekeSports();
-          } else if (currentState.contains("scribblit")) {
+          } else if (currentState.equals("scribblit")) {
             getView().attachScribblit();
-          } else if (currentState.contains("powermap")) {
+          } else if (currentState.equals("powermap")) {
             getView().attachPowerMap();
-          } else if (currentState.contains("beatles")) {
+          } else if (currentState.equals("beatles")) {
             getView().attachBeatles();
-          } else if (currentState.contains("tictactoe")) {
+          } else if (currentState.equals("tictactoe")) {
             getView().attachTicTacToe();
-          } else if (currentState.contains("developer")) {
+          } else if (currentState.equals("developer")) {
             getView().attachDeveloperProfile();
           }
         });
@@ -75,17 +75,17 @@ public class MainPresenter extends BasePresenter<MainView>{
   /** tells view to detach sectional fragment or close app based on current state of app. */
 
   public void backPressed() {
-              if((currentState.contains("education"))
-                  || (currentState.contains("skills"))
-                  || (currentState.contains("experience"))
-                  || (currentState.contains("facts"))
-                  || (currentState.contains("restaurant"))
-                  || (currentState.contains("tekesports"))
-                  || (currentState.contains("scribblit"))
-                  || (currentState.contains("powermap"))
-                  || (currentState.contains("beatles"))
-                  || (currentState.contains("tictactoe"))
-                  || (currentState.contains("developer")))
+              if((currentState.equals("education"))
+                  || (currentState.equals("skills"))
+                  || (currentState.equals("experience"))
+                  || (currentState.equals("facts"))
+                  || (currentState.equals("restaurant"))
+                  || (currentState.equals("tekesports"))
+                  || (currentState.equals("scribblit"))
+                  || (currentState.equals("powermap"))
+                  || (currentState.equals("beatles"))
+                  || (currentState.equals("tictactoe"))
+                  || (currentState.equals("developer")))
               {
                 iStateService.setState(lastState);
                 getView().detachFragment();

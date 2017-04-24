@@ -29,16 +29,16 @@ public class HeaderPresenter extends BasePresenter<HeaderView>{
   private void listenForStateChanges() {
     iStateService.getStateList()
         .subscribe(states -> {
-          if(currentState.contains("about")) {
+          if(currentState.equals("about")) {
             getView().unSelectAllIcons();
             getView().setAboutSelected();
-          } else if(currentState.contains("android")) {
+          } else if(currentState.equals("android")) {
             getView().unSelectAllIcons();
             getView().setAndroidSelected();
-          } else if (currentState.contains("web")) {
+          } else if (currentState.equals("web")) {
             getView().unSelectAllIcons();
             getView().setWebSelected();
-          } else if (currentState.contains("contact")) {
+          } else if (currentState.equals("contact")) {
             getView().unSelectAllIcons();
             getView().setContactSelected();
           }
